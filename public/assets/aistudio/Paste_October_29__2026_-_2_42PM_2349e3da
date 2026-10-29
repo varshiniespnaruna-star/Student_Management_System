@@ -1,0 +1,1115 @@
+# MASTER PROMPT: BUILD A COMPLETE PROFESSIONAL STUDENT MANAGEMENT SYSTEM
+
+## 1. PROJECT OVERVIEW
+
+Act as a senior full-stack developer, UI/UX designer, software architect, database engineer, and QA engineer.
+
+Build a complete, professional, responsive web application named **Smart Student Management System (SSMS)**.
+
+The application must support two primary user roles:
+
+1. Student
+2. Teacher
+
+Include an administrative role for managing users, academic records, subjects, and system settings.
+
+The final application must be a working website, not just a UI prototype or a collection of static pages.
+
+Implement the frontend, backend, database, authentication, role-based access control, dashboards, forms, data tables, charts, notifications, and automated tests.
+
+Do not leave buttons nonfunctional, use placeholder links for implemented features, or display hardcoded statistics as if they were live database results.
+
+If an external service is unavailable, provide a working local alternative and document the limitation.
+
+---
+
+## 2. TECHNOLOGY STACK
+
+Use the following technology stack.
+
+### Frontend
+- React.js
+- Vite
+- TypeScript
+- Tailwind CSS
+- React Router
+- Lucide React icons
+- Recharts for charts
+- React Hook Form for forms
+- Zod for validation
+- Axios for API requests
+
+### Backend
+- Python
+- Flask
+- Flask-SQLAlchemy
+- Flask-Migrate
+- Flask-JWT-Extended or secure session-based authentication
+- Flask-CORS, configured for the frontend origin
+- Marshmallow or equivalent request/response validation
+
+Choose one consistent authentication strategy and implement it securely.
+
+### Database
+- MySQL for production-style development
+- SQLite for automated tests and easy local setup
+
+Use environment variables for database connections and secrets.
+
+### Testing
+- pytest
+- pytest-cov
+- Flask test client
+- React component tests using Vitest and React Testing Library
+
+Use Playwright for optional end-to-end browser tests.
+
+Do not use Streamlit as the main frontend. Build a proper React website.
+
+---
+
+## 3. PROFESSIONAL UI DESIGN
+
+Create a clean, minimal, modern college management dashboard.
+
+### Design style
+- White or very light gray background
+- Dark navy text
+- Professional blue as the primary accent
+- Light gray borders
+- Subtle shadows
+- Rounded cards
+- Consistent spacing
+- Simple typography
+- Clear visual hierarchy
+- Minimal animations
+- Professional icons
+- Responsive layouts
+
+Avoid:
+- Excessive gradients
+- Neon colors
+- Too many colors
+- Oversized headings
+- Unnecessary animations
+- Cluttered dashboards
+- Random decorative elements
+- Excessive rounded cards
+- Emoji-based navigation icons
+
+Use a consistent design system for colors, spacing, typography, buttons, cards, forms, tables, and modals.
+
+Provide a light theme by default. An optional dark theme can be included if it can be implemented without compromising core functionality.
+
+### Application layout
+
+Create a reusable dashboard layout containing:
+
+1. Left sidebar
+2. Top navigation bar
+3. Main content area
+4. Breadcrumb navigation
+5. Page title and description
+6. Page-specific actions
+7. Notification interface
+8. User profile menu
+
+The sidebar must remain consistent throughout the authenticated dashboard.
+
+On desktop, use a fixed-width or collapsible sidebar.
+
+On mobile, convert the sidebar into an accessible drawer.
+
+The top navigation bar must contain:
+- Sidebar toggle
+- Breadcrumbs or current page title
+- Search interface
+- Notification bell
+- User avatar
+- User name
+- Role indicator
+- Profile menu
+- Logout action
+
+Make every navigation item functional.
+
+---
+
+## 4. EXACT PAGE STRUCTURE
+
+Create the following page structure.
+
+### A. PUBLIC PAGES — 3 PAGES
+
+1. Login Page
+2. Forgot Password Page
+3. Reset Password Page
+
+Implement real form validation and appropriate error and success messages.
+
+Do not allow users to access authenticated pages without logging in.
+
+For local development, provide a safe, documented method for resetting passwords without depending on a third-party email service.
+
+### B. STUDENT DASHBOARD — 8 PAGES
+
+Create exactly eight student-facing dashboard pages.
+
+#### Page 1: Student Overview Dashboard
+Route: `/student/dashboard`
+
+Display:
+- Welcome message
+- Student name and register number
+- Attendance percentage
+- Current semester GPA or available academic score
+- Pending assignments count
+- Upcoming examinations
+- Today's timetable
+- Recent announcements
+- Attendance trend chart
+- Subject performance chart
+- Upcoming deadlines
+- Recent academic activity
+
+All statistics must be calculated from actual database records.
+
+Show a helpful empty state when records are unavailable.
+
+#### Page 2: My Profile
+Route: `/student/profile`
+
+Display:
+- Profile photo or initials
+- Full name
+- Register number
+- Department
+- Academic year
+- Semester
+- Email
+- Phone number
+- Enrollment details
+- Emergency contact, if collected
+
+Allow students to edit only approved fields.
+
+Students must not be able to modify their register number, academic results, attendance records, or assigned role.
+
+#### Page 3: My Attendance
+Route: `/student/attendance`
+
+Features:
+- Overall attendance percentage
+- Subject-wise attendance table
+- Total classes
+- Classes attended
+- Classes missed
+- Attendance trend chart
+- Date-wise attendance history
+- Low-attendance warnings
+- Configurable attendance threshold
+
+Calculate attendance from recorded class sessions.
+
+Clearly distinguish between present, absent, and approved leave if leave management is implemented.
+
+Do not allow students to modify their attendance records.
+
+#### Page 4: My Marks and Academic Performance
+Route: `/student/academics`
+
+Features:
+- Subject-wise marks
+- Internal assessment marks
+- Examination results
+- Available GPA or grade
+- Semester-wise performance
+- Performance trend chart
+- Subject-wise comparison
+- Downloadable academic report
+
+Calculate totals and percentages using configurable grading rules.
+
+Do not invent missing examination results or GPA values.
+
+#### Page 5: My Assignments
+Route: `/student/assignments`
+
+Features:
+- Assignment list
+- Subject filter
+- Pending assignments
+- Submitted assignments
+- Overdue assignments
+- Assignment instructions
+- Due dates
+- File upload for submissions
+- Submission history
+- Teacher feedback and grades
+- Submission status
+
+Validate uploaded file types and file sizes.
+
+Store files securely and do not expose arbitrary filesystem paths.
+
+Students may view only assignments available to their classes and their own submissions.
+
+#### Page 6: My Timetable
+Route: `/student/timetable`
+
+Features:
+- Weekly timetable
+- Daily timetable
+- Subject name
+- Teacher name
+- Classroom
+- Start time and end time
+- Current-day highlighting
+- Upcoming class indicator
+
+Prevent overlapping class entries for the same student group where applicable.
+
+Display a clear message when no timetable is available.
+
+#### Page 7: Announcements and Notifications
+Route: `/student/notifications`
+
+Features:
+- College announcements
+- Teacher announcements
+- Academic notices
+- Assignment reminders
+- Examination notifications
+- Attendance warnings
+- Read and unread filters
+- Mark as read
+- Notification history
+
+Only display announcements and notifications that the student is authorized to access.
+
+#### Page 8: Study Planner and Skills
+Route: `/student/study-planner`
+
+Features:
+- Personal study tasks
+- Task title and description
+- Subject selection
+- Priority
+- Due date
+- Completion status
+- Upcoming examination planner
+- Weekly study schedule
+- Skills and certifications tracker
+- Project and internship records
+
+Students may manage their personal study tasks and skill records.
+
+Keep private study tasks separate from official college records.
+
+---
+
+## 5. TEACHER DASHBOARD — 8 PAGES
+
+Create exactly eight teacher-facing dashboard pages.
+
+#### Page 1: Teacher Overview Dashboard
+Route: `/teacher/dashboard`
+
+Display:
+- Welcome message
+- Teacher profile summary
+- Assigned subjects
+- Assigned classes
+- Total students taught
+- Today's timetable
+- Pending assignment evaluations
+- Recent announcements
+- Attendance completion summary
+- Subject performance chart
+- Recent academic activity
+
+Retrieve all values from the database.
+
+#### Page 2: Teacher Profile
+Route: `/teacher/profile`
+
+Features:
+- Teacher name
+- Employee ID
+- Department
+- Email
+- Phone number
+- Designation
+- Assigned subjects
+- Assigned classes
+
+Allow edits only to approved profile fields.
+
+#### Page 3: Student Directory
+Route: `/teacher/students`
+
+Features:
+- Student list
+- Search by name or register number
+- Filter by class, department, and semester
+- Student profile summary
+- Attendance summary
+- Academic performance summary
+
+Teachers must only access students within their assigned teaching scope.
+
+Protect sensitive information and avoid exposing unnecessary student data.
+
+#### Page 4: Attendance Management
+Route: `/teacher/attendance`
+
+Features:
+- Select class
+- Select subject
+- Select date
+- Load enrolled students
+- Mark present or absent
+- Record approved leave where supported
+- Save attendance
+- Edit attendance with appropriate authorization
+- Attendance history
+- Subject-wise attendance reports
+- Low-attendance student list
+
+Prevent duplicate attendance sessions for the same class, subject, and date.
+
+Record who created or modified attendance and when.
+
+Teachers must only manage attendance for their assigned classes and subjects.
+
+#### Page 5: Marks and Results Management
+Route: `/teacher/marks`
+
+Features:
+- Select class and subject
+- Create assessment
+- Configure maximum marks
+- Enter student marks
+- Validate marks against maximum marks
+- Save results
+- Edit results with authorization
+- View subject-wise performance
+- Calculate totals and percentages
+- Export marks reports
+
+Validate every mark on both the frontend and backend.
+
+Students must never be able to edit official marks.
+
+#### Page 6: Assignment Management
+Route: `/teacher/assignments`
+
+Features:
+- Create assignment
+- Select subject and class
+- Add title and instructions
+- Set issue date and due date
+- Attach permitted files
+- View student submissions
+- Download authorized submissions
+- Grade submissions
+- Add feedback
+- Track pending evaluations
+- Publish assignment results
+
+Teachers may manage assignments only for their assigned classes and subjects.
+
+#### Page 7: Timetable and Class Schedule
+Route: `/teacher/timetable`
+
+Features:
+- Weekly timetable
+- Assigned classes
+- Subject and classroom details
+- Create or request timetable changes according to permissions
+- View upcoming classes
+- Identify scheduling conflicts
+
+Validate timetable conflicts on the backend.
+
+If timetable editing is restricted to administrators, provide a request-change workflow instead of granting teachers unauthorized editing access.
+
+#### Page 8: Announcements and Reports
+Route: `/teacher/announcements`
+
+Features:
+- Create announcements
+- Select permitted target classes
+- Publish notices
+- Edit or archive authorized announcements
+- View published announcements
+- Generate attendance reports
+- Generate marks reports
+- Generate assignment completion reports
+- Export reports to CSV
+
+Record announcement author and publication time.
+
+Teachers must only publish announcements within their authorized scope.
+
+---
+
+## 6. ADMINISTRATIVE CAPABILITIES
+
+Implement administrator capabilities through a separate, permission-protected area.
+
+Do not add extra student or teacher pages to accommodate administrator features.
+
+Administrator capabilities must include:
+
+- Create, update, and deactivate student accounts
+- Create, update, and deactivate teacher accounts
+- Assign teachers to subjects and classes
+- Manage departments and academic semesters
+- Manage subjects and class enrollments
+- Configure attendance thresholds
+- Configure grading rules
+- Manage timetable records
+- Review audit logs
+- Manage system-level settings
+
+Create an additional administrator dashboard layout with its own sidebar and navigation.
+
+Administrator pages must be implemented as a clearly separate module, not as extra student or teacher dashboard pages.
+
+Provide administrator routes only for authenticated administrator accounts.
+
+---
+
+## 7. DATABASE DESIGN
+
+Design a normalized relational database.
+
+Include suitable tables for:
+
+1. Users
+2. Student profiles
+3. Teacher profiles
+4. Departments
+5. Academic years and semesters
+6. Classes or student groups
+7. Subjects
+8. Student enrollments
+9. Teacher-subject assignments
+10. Attendance sessions
+11. Attendance records
+12. Assessments
+13. Marks
+14. Assignments
+15. Assignment submissions
+16. Submission feedback
+17. Timetable entries
+18. Announcements
+19. Notifications
+20. Study tasks
+21. Skills and certifications
+22. Password reset tokens
+23. Audit logs
+
+Use:
+- Primary keys
+- Foreign keys
+- Unique constraints
+- Appropriate indexes
+- Database transactions
+- Timestamps
+- Referential integrity
+
+Avoid storing the same information redundantly across multiple tables.
+
+Use decimal types where appropriate for marks and financial-like numeric precision.
+
+Define relationships clearly.
+
+Examples:
+- One student can have multiple attendance records.
+- One teacher can teach multiple subjects.
+- One assignment can have multiple submissions.
+- One student can submit an assignment only as permitted by the submission policy.
+- One assessment can contain marks for multiple students.
+- One class can have multiple enrolled students.
+
+Enforce appropriate unique constraints for attendance sessions, marks, and enrollment records.
+
+Create database migrations and a documented initialization process.
+
+Use SQLite for tests and MySQL for normal development.
+
+---
+
+## 8. BACKEND API REQUIREMENTS
+
+Create a versioned REST API under `/api/v1`.
+
+Organize the backend into separate modules for:
+- Authentication
+- Students
+- Teachers
+- Attendance
+- Academics
+- Assignments
+- Timetable
+- Announcements
+- Notifications
+- Study planner
+- Reports
+- Administration
+
+Implement:
+- Request validation
+- Response serialization
+- Consistent HTTP status codes
+- Pagination
+- Search
+- Filtering
+- Sorting where appropriate
+- Error handling
+- Database transactions
+- Authorization checks
+- Logging
+
+Never trust role names, student IDs, teacher IDs, or permissions supplied by the frontend.
+
+Derive the authenticated identity from the validated server-side authentication context.
+
+Return appropriate errors:
+- 400 for invalid requests
+- 401 for unauthenticated requests
+- 403 for unauthorized actions
+- 404 for missing resources
+- 409 for relevant conflicts
+- 500 for unexpected server errors
+
+Do not expose stack traces, passwords, secrets, or internal database errors to users.
+
+---
+
+## 9. AUTHENTICATION AND SECURITY
+
+Implement secure authentication.
+
+Requirements:
+- Password hashing using a suitable password-hashing algorithm.
+- Role-based authorization.
+- Server-side permission checks.
+- Protected frontend routes.
+- Session expiration or token expiration.
+- Secure logout.
+- Input validation.
+- SQL injection prevention.
+- Cross-site scripting protections.
+- CSRF protection when using cookie-based authentication.
+- Secure cookie settings in production.
+- CORS restrictions.
+- Rate limiting for authentication endpoints.
+- Secure password reset flow.
+- Safe file upload handling.
+- Audit logs for important changes.
+
+Do not hardcode passwords, secret keys, database credentials, or API keys.
+
+Provide a `.env.example` file containing variable names and safe placeholders.
+
+Do not commit the actual `.env` file.
+
+For JWT authentication, use a deliberate token storage and refresh strategy. Do not casually store long-lived authentication tokens in localStorage.
+
+---
+
+## 10. NAVIGATION AND ROUTING
+
+Create a central route configuration.
+
+Use separate route guards for:
+- Public pages
+- Student pages
+- Teacher pages
+- Administrator pages
+
+Sidebar navigation must:
+- Highlight the current page
+- Support active nested routes
+- Display appropriate icons
+- Work without full-page reloads
+- Close the mobile drawer after navigation
+- Hide unauthorized navigation items
+
+However, hiding links is not sufficient security. The backend must enforce authorization independently.
+
+Add breadcrumbs and page titles.
+
+Ensure browser back and forward navigation works correctly.
+
+Add a custom 404 page and meaningful loading, error, and empty states.
+
+Do not create duplicate pages for the same function.
+
+Maintain exactly eight student dashboard pages and eight teacher dashboard pages as defined above.
+
+---
+
+## 11. FUNCTIONAL REQUIREMENTS
+
+All implemented controls must work.
+
+Examples:
+
+- Search must filter real records.
+- Filters must update displayed data.
+- Pagination must work.
+- Forms must validate input.
+- Save buttons must persist data.
+- Cancel buttons must discard unsaved changes.
+- Delete or deactivate actions must require appropriate confirmation.
+- Tables must refresh after successful mutations.
+- Charts must use real data.
+- Notification counts must reflect actual unread notifications.
+- Logout must terminate the authenticated session.
+- File uploads must be validated and stored securely.
+- CSV exports must reflect the selected records.
+- Dashboard statistics must be calculated from database data.
+
+Use toast messages or inline feedback for successful and failed actions.
+
+Add loading indicators and disable submit buttons while requests are in progress.
+
+Avoid full-page reloads for ordinary CRUD operations.
+
+Use accessible labels, keyboard navigation, appropriate color contrast, and clear form error messages.
+
+---
+
+## 12. PYTEST AUTOMATED TESTING
+
+Create a dedicated backend test suite using pytest.
+
+Create the following test files:
+
+tests/
+    conftest.py
+    test_auth.py
+    test_students.py
+    test_teachers.py
+    test_attendance.py
+    test_academics.py
+    test_assignments.py
+    test_timetable.py
+    test_announcements.py
+    test_notifications.py
+    test_study_planner.py
+    test_reports.py
+    test_admin.py
+    test_security.py
+
+### conftest.py
+
+Implement:
+- Test application fixture
+- Isolated SQLite test database
+- Flask test client
+- Database initialization
+- Database cleanup
+- Student test user
+- Teacher test user
+- Administrator test user
+- Authentication helpers
+- Sample student, teacher, class, and subject records
+
+Each test must run independently.
+
+Do not use the production database for tests.
+
+### test_auth.py
+
+Test:
+- Successful login
+- Invalid credentials
+- Missing fields
+- Logout
+- Protected routes
+- Expired or invalid authentication credentials
+- Password reset validation
+
+### test_students.py
+
+Test:
+- Create student
+- Retrieve student
+- Update permitted profile fields
+- Invalid student data
+- Duplicate register number
+- Unauthorized access
+- Student data isolation
+
+### test_teachers.py
+
+Test:
+- Teacher profile access
+- Authorized teacher updates
+- Student access restrictions
+- Teacher assignment permissions
+
+### test_attendance.py
+
+Test:
+- Create attendance session
+- Record attendance
+- Calculate attendance percentage
+- Reject invalid attendance status
+- Prevent duplicate sessions
+- Prevent unauthorized attendance changes
+- Prevent students from editing official attendance
+- Handle missing records correctly
+
+### test_academics.py
+
+Test:
+- Create assessments
+- Enter marks
+- Reject negative marks
+- Reject marks exceeding maximum marks
+- Calculate totals and percentages
+- Prevent students from changing marks
+- Restrict teacher access to assigned classes
+
+### test_assignments.py
+
+Test:
+- Create assignments
+- Submit assignments
+- Validate deadlines
+- Reject unauthorized file types
+- Prevent unauthorized submission access
+- Save feedback and grades
+- Prevent unauthorized grading
+
+### test_timetable.py
+
+Test:
+- Retrieve timetable
+- Create authorized timetable entries
+- Detect overlapping sessions
+- Validate time ranges
+- Enforce teacher and class permissions
+
+### test_announcements.py
+
+Test:
+- Create announcements
+- Restrict publication permissions
+- Filter announcements by audience
+- Archive authorized announcements
+- Prevent unauthorized modification
+
+### test_notifications.py
+
+Test:
+- Create notifications
+- Retrieve authorized notifications
+- Mark notifications as read
+- Calculate unread count
+- Prevent cross-user notification access
+
+### test_study_planner.py
+
+Test:
+- Create study task
+- Update task
+- Complete task
+- Reject invalid due dates where applicable
+- Prevent access to another student's private tasks
+
+### test_reports.py
+
+Test:
+- Attendance report generation
+- Marks report generation
+- CSV export
+- Report filters
+- Teacher data scope
+- Student data isolation
+
+### test_admin.py
+
+Test:
+- Administrator account management
+- Role assignment
+- Subject and department management
+- Unauthorized administrator operations
+- Deactivation of user accounts
+
+### test_security.py
+
+Test:
+- Unauthenticated access
+- Role escalation attempts
+- Cross-student data access
+- Cross-teacher data access
+- Invalid identifiers
+- Input validation
+- Unsafe file uploads
+- Access to protected resources
+- Attempts to modify records outside the user's permissions
+
+Write real assertions for every test.
+
+Do not create empty test files, tests containing only `pass`, or tests that simply assert `True`.
+
+Run pytest and fix the actual implementation errors.
+
+Target at least 80% backend test coverage, while prioritizing security-sensitive business logic.
+
+Do not reduce coverage by excluding untested application modules without justification.
+
+---
+
+## 13. FRONTEND TESTING
+
+Configure Vitest and React Testing Library.
+
+Create tests for:
+- Login form validation
+- Protected route behavior
+- Sidebar navigation
+- Active navigation state
+- Role-based menu visibility
+- Dashboard loading states
+- Empty states
+- Form validation
+- Attendance table interactions
+- Marks entry validation
+- Assignment submission forms
+- Notification read/unread behavior
+- Error messages
+- Mobile navigation
+
+Mock API responses only in frontend tests.
+
+Verify that components render correctly for loading, success, empty, and failure states.
+
+Do not treat frontend tests as a replacement for backend integration tests.
+
+---
+
+## 14. PROJECT FOLDER STRUCTURE
+
+Use a maintainable folder structure similar to the following:
+
+student-management-system/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── router.tsx
+│   │   │   └── providers.tsx
+│   │   ├── components/
+│   │   │   ├── layout/
+│   │   │   ├── navigation/
+│   │   │   ├── forms/
+│   │   │   ├── tables/
+│   │   │   ├── charts/
+│   │   │   └── common/
+│   │   ├── pages/
+│   │   │   ├── auth/
+│   │   │   ├── student/
+│   │   │   ├── teacher/
+│   │   │   └── admin/
+│   │   ├── hooks/
+│   │   ├── services/
+│   │   ├── types/
+│   │   ├── utils/
+│   │   ├── styles/
+│   │   └── main.tsx
+│   ├── tests/
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── extensions.py
+│   │   ├── models/
+│   │   ├── auth/
+│   │   ├── students/
+│   │   ├── teachers/
+│   │   ├── attendance/
+│   │   ├── academics/
+│   │   ├── assignments/
+│   │   ├── timetable/
+│   │   ├── announcements/
+│   │   ├── notifications/
+│   │   ├── study_planner/
+│   │   ├── reports/
+│   │   └── admin/
+│   ├── migrations/
+│   ├── tests/
+│   ├── requirements.txt
+│   ├── pytest.ini
+│   └── run.py
+│
+├── uploads/
+├── .env.example
+├── .gitignore
+├── README.md
+└── docker-compose.yml
+
+Adjust the structure when necessary, but maintain clear separation of responsibilities.
+
+Do not place all backend logic in one Python file or all frontend pages in one React component.
+
+Keep uploaded private files outside publicly served frontend directories.
+
+---
+
+## 15. SAMPLE DATA AND DEMO MODE
+
+Create a database seeding command for local development.
+
+Include realistic but fictional sample data:
+- One administrator
+- Multiple teachers
+- At least 20 students
+- Several departments
+- Multiple subjects
+- Class enrollments
+- Attendance records
+- Assessments and marks
+- Assignments and submissions
+- Timetable entries
+- Announcements
+- Notifications
+
+Use fictional names and email addresses.
+
+Document demo account creation and password setup.
+
+Do not hardcode demo credentials into production configuration.
+
+The dashboard should display meaningful statistics when seeded data exists.
+
+The application must also work correctly with an empty database.
+
+---
+
+## 16. DOCUMENTATION
+
+Create a comprehensive README.md containing:
+
+1. Project overview
+2. Features
+3. Technology stack
+4. Architecture
+5. Folder structure
+6. Prerequisites
+7. Installation instructions
+8. Environment configuration
+9. Database setup
+10. Database migration instructions
+11. Sample data seeding
+12. Frontend startup commands
+13. Backend startup commands
+14. Pytest execution commands
+15. Frontend test commands
+16. Test coverage commands
+17. API documentation
+18. Demo account setup
+19. Troubleshooting
+20. Security considerations
+
+Provide exact commands for Windows PowerShell and, where useful, macOS/Linux.
+
+Include dependency files and configuration needed to run the project locally.
+
+---
+
+## 17. DEVELOPMENT WORKFLOW
+
+Implement the application in this order:
+
+Phase 1: Architecture and project setup.
+
+Phase 2: Database models, migrations, authentication, and permissions.
+
+Phase 3: Shared UI components, sidebar, top navigation, and routing.
+
+Phase 4: Student dashboard and all eight student pages.
+
+Phase 5: Teacher dashboard and all eight teacher pages.
+
+Phase 6: Administrator module.
+
+Phase 7: API integration and database persistence.
+
+Phase 8: Reports, charts, notifications, and validation.
+
+Phase 9: Backend pytest suite and frontend tests.
+
+Phase 10: Security checks, responsive design, bug fixing, and documentation.
+
+Do not stop after generating a project plan or mockup.
+
+Create and implement the actual files.
+
+If working in an environment with file-system and terminal access, inspect the existing project before making changes. Preserve working code and integrate with the existing structure when reasonable.
+
+If the project already exists, do not overwrite working files unnecessarily.
+
+Work in small, verifiable stages.
+
+After each stage:
+- Run the relevant tests.
+- Fix implementation errors.
+- Check imports and dependencies.
+- Verify route behavior.
+- Verify database persistence.
+- Report completed files and remaining tasks.
+
+Do not claim that tests pass unless they have actually been executed.
+
+If execution tools are unavailable, clearly state which checks remain unverified.
+
+If a requested feature cannot be completed, explain the limitation instead of silently omitting it.
+
+---
+
+## 18. FINAL ACCEPTANCE CRITERIA
+
+The project is considered complete only when:
+
+1. The website launches locally.
+2. Login and logout work.
+3. Student, teacher, and administrator permissions are enforced.
+4. Exactly eight student dashboard pages exist.
+5. Exactly eight teacher dashboard pages exist.
+6. Public authentication pages are implemented.
+7. The administrator module is separate.
+8. Sidebar navigation works on desktop and mobile.
+9. The top navigation bar works.
+10. All dashboard data is connected to the backend.
+11. Forms save and retrieve data from the database.
+12. Attendance calculations are correct.
+13. Marks validation is correct.
+14. Assignment submission and evaluation work.
+15. Timetable conflicts are detected.
+16. Notifications respect user permissions.
+17. Reports export valid data.
+18. Backend pytest tests are implemented and executed.
+19. Frontend tests are implemented and executed.
+20. No critical authorization or data-isolation failures remain.
+21. The README contains working setup instructions.
+22. The UI is responsive, accessible, and visually consistent.
+23. No implemented buttons are dead.
+24. No private student records are exposed to unauthorized users.
+25. The final report accurately describes what is implemented and what remains incomplete.
+
+Start by inspecting the current project files and identifying the existing framework and code.
+
+Then provide a short implementation plan and begin building the application.
+
+Prioritize a working, secure, professional system over unnecessary complexity.

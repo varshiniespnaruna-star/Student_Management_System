@@ -1,0 +1,5042 @@
+{
+  "systemSettings": {
+    "attendance_warning_threshold": 75,
+    "system_name": "Smart Student Management System (SSMS)",
+    "academic_year": "2026-2027",
+    "allow_student_profile_edit": true,
+    "grading_rules": [
+      {
+        "grade": "A+",
+        "min_percentage": 90,
+        "gpa_point": 4
+      },
+      {
+        "grade": "A",
+        "min_percentage": 80,
+        "gpa_point": 3.7
+      },
+      {
+        "grade": "B+",
+        "min_percentage": 70,
+        "gpa_point": 3.3
+      },
+      {
+        "grade": "B",
+        "min_percentage": 60,
+        "gpa_point": 3
+      },
+      {
+        "grade": "C",
+        "min_percentage": 50,
+        "gpa_point": 2
+      },
+      {
+        "grade": "F",
+        "min_percentage": 0,
+        "gpa_point": 0
+      }
+    ]
+  },
+  "departments": [
+    {
+      "id": "dept-1",
+      "name": "Computer Science and Engineering",
+      "code": "CSE",
+      "description": "Department of Computing, Software and Data Sciences"
+    },
+    {
+      "id": "dept-2",
+      "name": "Electronics and Communication Engineering",
+      "code": "ECE",
+      "description": "Department of Microelectronics and Embedded Systems"
+    },
+    {
+      "id": "dept-3",
+      "name": "Information Technology",
+      "code": "IT",
+      "description": "Department of Applied Information Systems"
+    },
+    {
+      "id": "dept-4",
+      "name": "Mathematics & Computer Applications",
+      "code": "MCA",
+      "description": "Department of Mathematics and Quantitative Sciences"
+    }
+  ],
+  "semesters": [
+    {
+      "id": "sem-2026-spring",
+      "name": "Spring 2026",
+      "year": 2026,
+      "is_current": false
+    },
+    {
+      "id": "sem-2026-fall",
+      "name": "Fall 2026",
+      "year": 2026,
+      "is_current": true
+    }
+  ],
+  "classes": [
+    {
+      "id": "cls-csea-6",
+      "name": "CSE - Section A (Sem 6)",
+      "department_id": "dept-1",
+      "semester_id": "sem-2026-fall",
+      "section": "A"
+    },
+    {
+      "id": "cls-cseb-6",
+      "name": "CSE - Section B (Sem 6)",
+      "department_id": "dept-1",
+      "semester_id": "sem-2026-fall",
+      "section": "B"
+    },
+    {
+      "id": "cls-ecea-4",
+      "name": "ECE - Section A (Sem 4)",
+      "department_id": "dept-2",
+      "semester_id": "sem-2026-fall",
+      "section": "A"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "sub-cs601",
+      "name": "Database Management Systems",
+      "code": "CS601",
+      "department_id": "dept-1",
+      "credits": 4,
+      "description": "Relational design, normalization, indexing, and SQL/NoSQL transaction theory"
+    },
+    {
+      "id": "sub-cs602",
+      "name": "Computer Networks",
+      "code": "CS602",
+      "department_id": "dept-1",
+      "credits": 4,
+      "description": "OSI stack, TCP/IP, routing protocols, flow control, and network security"
+    },
+    {
+      "id": "sub-cs603",
+      "name": "Web Technologies & Cloud",
+      "code": "CS603",
+      "department_id": "dept-1",
+      "credits": 3,
+      "description": "Modern web architecture, REST APIs, cloud deployments, and containerization"
+    },
+    {
+      "id": "sub-cs604",
+      "name": "Software Engineering & Agile",
+      "code": "CS604",
+      "department_id": "dept-1",
+      "credits": 3,
+      "description": "SDLC, Scrum practices, CI/CD pipelines, and design patterns"
+    },
+    {
+      "id": "sub-cs605",
+      "name": "Artificial Intelligence Foundations",
+      "code": "CS605",
+      "department_id": "dept-1",
+      "credits": 3,
+      "description": "Search algorithms, probabilistic reasoning, knowledge representation"
+    }
+  ],
+  "users": [
+    {
+      "id": "usr-admin-1",
+      "email": "admin@ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOJkR//rSgcE587VPSwOAS0diR0zubmFq",
+      "role": "admin",
+      "full_name": "Dr. Evelyn Vance",
+      "avatar_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150",
+      "phone": "+1 (555) 019-2831",
+      "status": "active",
+      "created_at": "2026-01-10T08:00:00Z"
+    },
+    {
+      "id": "usr-tch-1",
+      "email": "sarah.jenkins@ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOJ8WCvM6WUZA209/Gh3yqgWTlnNfuMJa",
+      "role": "teacher",
+      "full_name": "Prof. Sarah Jenkins",
+      "avatar_url": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=150",
+      "phone": "+1 (555) 234-5678",
+      "status": "active",
+      "created_at": "2026-01-15T09:00:00Z"
+    },
+    {
+      "id": "usr-tch-2",
+      "email": "robert.chen@ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOJ8WCvM6WUZA209/Gh3yqgWTlnNfuMJa",
+      "role": "teacher",
+      "full_name": "Dr. Robert Chen",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      "phone": "+1 (555) 345-6789",
+      "status": "active",
+      "created_at": "2026-01-15T09:30:00Z"
+    },
+    {
+      "id": "usr-tch-3",
+      "email": "priya.sharma@ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOJ8WCvM6WUZA209/Gh3yqgWTlnNfuMJa",
+      "role": "teacher",
+      "full_name": "Dr. Priya Sharma",
+      "avatar_url": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150",
+      "phone": "+1 (555) 456-7890",
+      "status": "active",
+      "created_at": "2026-02-01T10:00:00Z"
+    },
+    {
+      "id": "usr-tch-4",
+      "email": "david.miller@ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOJ8WCvM6WUZA209/Gh3yqgWTlnNfuMJa",
+      "role": "teacher",
+      "full_name": "Prof. David Miller",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      "phone": "+1 (555) 567-8901",
+      "status": "active",
+      "created_at": "2026-02-01T10:30:00Z"
+    },
+    {
+      "id": "usr-std-1",
+      "email": "alex.morgan@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Alex Morgan",
+      "avatar_url": "https://images.unsplash.com/photo-1500000000000?w=150",
+      "phone": "+1 (555) 789-0101",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-2",
+      "email": "priya.patel@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Priya Patel",
+      "avatar_url": "https://images.unsplash.com/photo-1500000100000?w=150",
+      "phone": "+1 (555) 789-0102",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-3",
+      "email": "marcus.wright@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Marcus Wright",
+      "avatar_url": "https://images.unsplash.com/photo-1500000200000?w=150",
+      "phone": "+1 (555) 789-0103",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-4",
+      "email": "elena.rostova@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Elena Rostova",
+      "avatar_url": "https://images.unsplash.com/photo-1500000300000?w=150",
+      "phone": "+1 (555) 789-0104",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-5",
+      "email": "jordan.lee@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Jordan Lee",
+      "avatar_url": "https://images.unsplash.com/photo-1500000400000?w=150",
+      "phone": "+1 (555) 789-0105",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-6",
+      "email": "chloe.bennett@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Chloe Bennett",
+      "avatar_url": "https://images.unsplash.com/photo-1500000500000?w=150",
+      "phone": "+1 (555) 789-0106",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-7",
+      "email": "devon.ramirez@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Devon Ramirez",
+      "avatar_url": "https://images.unsplash.com/photo-1500000600000?w=150",
+      "phone": "+1 (555) 789-0107",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-8",
+      "email": "aisha.mansoor@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Aisha Al-Mansoor",
+      "avatar_url": "https://images.unsplash.com/photo-1500000700000?w=150",
+      "phone": "+1 (555) 789-0108",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-9",
+      "email": "ethan.hawke@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Ethan Hawke",
+      "avatar_url": "https://images.unsplash.com/photo-1500000800000?w=150",
+      "phone": "+1 (555) 789-0109",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-10",
+      "email": "sophia.chen@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Sophia Chen",
+      "avatar_url": "https://images.unsplash.com/photo-1500000900000?w=150",
+      "phone": "+1 (555) 789-0110",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-11",
+      "email": "liam.oconnor@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Liam O’Connor",
+      "avatar_url": "https://images.unsplash.com/photo-1500001000000?w=150",
+      "phone": "+1 (555) 789-0111",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-12",
+      "email": "maya.lin@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Maya Lin",
+      "avatar_url": "https://images.unsplash.com/photo-1500001100000?w=150",
+      "phone": "+1 (555) 789-0112",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-13",
+      "email": "noah.goldberg@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Noah Goldberg",
+      "avatar_url": "https://images.unsplash.com/photo-1500001200000?w=150",
+      "phone": "+1 (555) 789-0113",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-14",
+      "email": "zara.washington@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Zara Washington",
+      "avatar_url": "https://images.unsplash.com/photo-1500001300000?w=150",
+      "phone": "+1 (555) 789-0114",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-15",
+      "email": "lucas.silva@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Lucas Silva",
+      "avatar_url": "https://images.unsplash.com/photo-1500001400000?w=150",
+      "phone": "+1 (555) 789-0115",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-16",
+      "email": "hannah.schmidt@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Hannah Schmidt",
+      "avatar_url": "https://images.unsplash.com/photo-1500001500000?w=150",
+      "phone": "+1 (555) 789-0116",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-17",
+      "email": "rohan.mehra@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Rohan Mehra",
+      "avatar_url": "https://images.unsplash.com/photo-1500001600000?w=150",
+      "phone": "+1 (555) 789-0117",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-18",
+      "email": "emily.watson@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Emily Watson",
+      "avatar_url": "https://images.unsplash.com/photo-1500001700000?w=150",
+      "phone": "+1 (555) 789-0118",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-19",
+      "email": "carlos.gutierrez@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Carlos Gutierrez",
+      "avatar_url": "https://images.unsplash.com/photo-1500001800000?w=150",
+      "phone": "+1 (555) 789-0119",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-20",
+      "email": "grace.kim@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Grace Kim",
+      "avatar_url": "https://images.unsplash.com/photo-1500001900000?w=150",
+      "phone": "+1 (555) 789-0120",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-21",
+      "email": "tariq.hussain@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Tariq Hussain",
+      "avatar_url": "https://images.unsplash.com/photo-1500002000000?w=150",
+      "phone": "+1 (555) 789-0121",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    },
+    {
+      "id": "usr-std-22",
+      "email": "zoe.kravitz@student.ssms.edu",
+      "password_hash": "$2b$10$tjitwU4/OacfkMt3VhC0KOUk/FZqK0.1Rw4mWZlCkjUygoI8T/Z4G",
+      "role": "student",
+      "full_name": "Zoe Kravitz",
+      "avatar_url": "https://images.unsplash.com/photo-1500002100000?w=150",
+      "phone": "+1 (555) 789-0122",
+      "status": "active",
+      "created_at": "2026-02-10T08:00:00Z"
+    }
+  ],
+  "studentProfiles": [
+    {
+      "id": "sp-1",
+      "user_id": "usr-std-1",
+      "register_number": "REG-2026-001",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1111",
+      "address": "42 Pine Crest Ave, Seattle, WA",
+      "date_of_birth": "2004-04-12",
+      "blood_group": "O+"
+    },
+    {
+      "id": "sp-2",
+      "user_id": "usr-std-2",
+      "register_number": "REG-2026-002",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1112",
+      "address": "108 Beacon Hill Way, Seattle, WA",
+      "date_of_birth": "2004-06-25",
+      "blood_group": "B+"
+    },
+    {
+      "id": "sp-3",
+      "user_id": "usr-std-3",
+      "register_number": "REG-2026-003",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1113",
+      "address": "710 University Blvd, Seattle, WA",
+      "date_of_birth": "2003-11-08",
+      "blood_group": "A+"
+    },
+    {
+      "id": "sp-4",
+      "user_id": "usr-std-4",
+      "register_number": "REG-2026-004",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1114",
+      "address": "33 Magnolia St, Bellevue, WA",
+      "date_of_birth": "2004-01-19",
+      "blood_group": "AB+"
+    },
+    {
+      "id": "sp-5",
+      "user_id": "usr-std-5",
+      "register_number": "REG-2026-005",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1115",
+      "address": "822 Maple Grove Dr, Redmond, WA",
+      "date_of_birth": "2004-08-30",
+      "blood_group": "O-"
+    },
+    {
+      "id": "sp-6",
+      "user_id": "usr-std-6",
+      "register_number": "REG-2026-006",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1116",
+      "address": "1540 Cascade Court, Seattle, WA",
+      "date_of_birth": "2004-03-14",
+      "blood_group": "A-"
+    },
+    {
+      "id": "sp-7",
+      "user_id": "usr-std-7",
+      "register_number": "REG-2026-007",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1117",
+      "address": "298 Lakeview Terrace, Kirkland, WA",
+      "date_of_birth": "2003-09-02",
+      "blood_group": "B-"
+    },
+    {
+      "id": "sp-8",
+      "user_id": "usr-std-8",
+      "register_number": "REG-2026-008",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1118",
+      "address": "512 Cedar Heights, Seattle, WA",
+      "date_of_birth": "2004-05-18",
+      "blood_group": "O+"
+    },
+    {
+      "id": "sp-9",
+      "user_id": "usr-std-9",
+      "register_number": "REG-2026-009",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1119",
+      "address": "620 Olympic View, Bellevue, WA",
+      "date_of_birth": "2004-07-22",
+      "blood_group": "A+"
+    },
+    {
+      "id": "sp-10",
+      "user_id": "usr-std-10",
+      "register_number": "REG-2026-010",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1120",
+      "address": "88 Evergreen Way, Seattle, WA",
+      "date_of_birth": "2004-02-11",
+      "blood_group": "AB-"
+    },
+    {
+      "id": "sp-11",
+      "user_id": "usr-std-11",
+      "register_number": "REG-2026-011",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1121",
+      "address": "401 Pacific Highway, Tacoma, WA",
+      "date_of_birth": "2003-12-05",
+      "blood_group": "B+"
+    },
+    {
+      "id": "sp-12",
+      "user_id": "usr-std-12",
+      "register_number": "REG-2026-012",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1122",
+      "address": "730 Rainier Ave, Seattle, WA",
+      "date_of_birth": "2004-10-09",
+      "blood_group": "O+"
+    },
+    {
+      "id": "sp-13",
+      "user_id": "usr-std-13",
+      "register_number": "REG-2026-013",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1123",
+      "address": "190 Summit Ave, Seattle, WA",
+      "date_of_birth": "2004-04-03",
+      "blood_group": "A+"
+    },
+    {
+      "id": "sp-14",
+      "user_id": "usr-std-14",
+      "register_number": "REG-2026-014",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1124",
+      "address": "344 Meridian Ave, Kirkland, WA",
+      "date_of_birth": "2003-08-16",
+      "blood_group": "O-"
+    },
+    {
+      "id": "sp-15",
+      "user_id": "usr-std-15",
+      "register_number": "REG-2026-015",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1125",
+      "address": "811 Harbor Steps, Seattle, WA",
+      "date_of_birth": "2004-09-29",
+      "blood_group": "B+"
+    },
+    {
+      "id": "sp-16",
+      "user_id": "usr-std-16",
+      "register_number": "REG-2026-016",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1126",
+      "address": "502 Westlake Ave, Seattle, WA",
+      "date_of_birth": "2004-01-08",
+      "blood_group": "A+"
+    },
+    {
+      "id": "sp-17",
+      "user_id": "usr-std-17",
+      "register_number": "REG-2026-017",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1127",
+      "address": "915 Green Lake Way, Seattle, WA",
+      "date_of_birth": "2004-06-14",
+      "blood_group": "O+"
+    },
+    {
+      "id": "sp-18",
+      "user_id": "usr-std-18",
+      "register_number": "REG-2026-018",
+      "department_id": "dept-1",
+      "class_id": "cls-csea-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1128",
+      "address": "224 Queen Anne Rd, Seattle, WA",
+      "date_of_birth": "2003-10-31",
+      "blood_group": "AB+"
+    },
+    {
+      "id": "sp-19",
+      "user_id": "usr-std-19",
+      "register_number": "REG-2026-019",
+      "department_id": "dept-1",
+      "class_id": "cls-cseb-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1129",
+      "address": "670 Capitol Hill Dr, Seattle, WA",
+      "date_of_birth": "2004-05-02",
+      "blood_group": "B+"
+    },
+    {
+      "id": "sp-20",
+      "user_id": "usr-std-20",
+      "register_number": "REG-2026-020",
+      "department_id": "dept-1",
+      "class_id": "cls-cseb-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1130",
+      "address": "1120 Broadway East, Seattle, WA",
+      "date_of_birth": "2004-07-07",
+      "blood_group": "O+"
+    },
+    {
+      "id": "sp-21",
+      "user_id": "usr-std-21",
+      "register_number": "REG-2026-021",
+      "department_id": "dept-1",
+      "class_id": "cls-cseb-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1131",
+      "address": "419 Alki Ave SW, Seattle, WA",
+      "date_of_birth": "2003-09-17",
+      "blood_group": "A-"
+    },
+    {
+      "id": "sp-22",
+      "user_id": "usr-std-22",
+      "register_number": "REG-2026-022",
+      "department_id": "dept-1",
+      "class_id": "cls-cseb-6",
+      "semester": 6,
+      "enrollment_year": 2023,
+      "emergency_contact": "+1 (555) 999-1132",
+      "address": "305 Fremont Ave N, Seattle, WA",
+      "date_of_birth": "2004-11-20",
+      "blood_group": "B+"
+    }
+  ],
+  "teacherProfiles": [
+    {
+      "id": "tp-1",
+      "user_id": "usr-tch-1",
+      "employee_id": "EMP-101",
+      "department_id": "dept-1",
+      "designation": "Associate Professor",
+      "qualification": "Ph.D. in Computer Science (MIT)",
+      "experience_years": 12,
+      "office_room": "Tech Block 3, Room 402"
+    },
+    {
+      "id": "tp-2",
+      "user_id": "usr-tch-2",
+      "employee_id": "EMP-102",
+      "department_id": "dept-1",
+      "designation": "Professor & HOD",
+      "qualification": "Ph.D. in Distributed Computing (Stanford)",
+      "experience_years": 18,
+      "office_room": "Tech Block 3, Room 401"
+    },
+    {
+      "id": "tp-3",
+      "user_id": "usr-tch-3",
+      "employee_id": "EMP-103",
+      "department_id": "dept-1",
+      "designation": "Assistant Professor",
+      "qualification": "M.Tech, Ph.D. in AI/ML (Georgia Tech)",
+      "experience_years": 7,
+      "office_room": "Tech Block 2, Room 215"
+    },
+    {
+      "id": "tp-4",
+      "user_id": "usr-tch-4",
+      "employee_id": "EMP-104",
+      "department_id": "dept-1",
+      "designation": "Senior Lecturer",
+      "qualification": "M.S. in Software Systems (CMU)",
+      "experience_years": 9,
+      "office_room": "Tech Block 2, Room 210"
+    }
+  ],
+  "teacherAssignments": [
+    {
+      "id": "ta-1",
+      "teacher_id": "tp-1",
+      "subject_id": "sub-cs601",
+      "class_id": "cls-csea-6"
+    },
+    {
+      "id": "ta-2",
+      "teacher_id": "tp-1",
+      "subject_id": "sub-cs601",
+      "class_id": "cls-cseb-6"
+    },
+    {
+      "id": "ta-3",
+      "teacher_id": "tp-2",
+      "subject_id": "sub-cs602",
+      "class_id": "cls-csea-6"
+    },
+    {
+      "id": "ta-4",
+      "teacher_id": "tp-3",
+      "subject_id": "sub-cs603",
+      "class_id": "cls-csea-6"
+    },
+    {
+      "id": "ta-5",
+      "teacher_id": "tp-4",
+      "subject_id": "sub-cs604",
+      "class_id": "cls-csea-6"
+    },
+    {
+      "id": "ta-6",
+      "teacher_id": "tp-3",
+      "subject_id": "sub-cs605",
+      "class_id": "cls-csea-6"
+    }
+  ],
+  "timetableEntries": [
+    {
+      "id": "tt-1",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "day_of_week": "Monday",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "room": "Lab 4B"
+    },
+    {
+      "id": "tt-2",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "day_of_week": "Monday",
+      "start_time": "10:15",
+      "end_time": "11:15",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-3",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs603",
+      "teacher_id": "tp-3",
+      "day_of_week": "Monday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-4",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs604",
+      "teacher_id": "tp-4",
+      "day_of_week": "Monday",
+      "start_time": "13:30",
+      "end_time": "15:30",
+      "room": "Software Studio 2"
+    },
+    {
+      "id": "tt-5",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs605",
+      "teacher_id": "tp-3",
+      "day_of_week": "Tuesday",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-6",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "day_of_week": "Tuesday",
+      "start_time": "10:15",
+      "end_time": "11:15",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-7",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "day_of_week": "Tuesday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "room": "Network Lab 3"
+    },
+    {
+      "id": "tt-8",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs603",
+      "teacher_id": "tp-3",
+      "day_of_week": "Wednesday",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "room": "Cloud Innovation Lab"
+    },
+    {
+      "id": "tt-9",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs604",
+      "teacher_id": "tp-4",
+      "day_of_week": "Wednesday",
+      "start_time": "11:15",
+      "end_time": "12:15",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-10",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs605",
+      "teacher_id": "tp-3",
+      "day_of_week": "Wednesday",
+      "start_time": "13:30",
+      "end_time": "14:30",
+      "room": "Lecture Hall 102"
+    },
+    {
+      "id": "tt-11",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "day_of_week": "Thursday",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "room": "Database Lab 1"
+    },
+    {
+      "id": "tt-12",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "day_of_week": "Thursday",
+      "start_time": "11:15",
+      "end_time": "12:15",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-13",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs605",
+      "teacher_id": "tp-3",
+      "day_of_week": "Thursday",
+      "start_time": "13:30",
+      "end_time": "14:30",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-14",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs604",
+      "teacher_id": "tp-4",
+      "day_of_week": "Friday",
+      "start_time": "09:00",
+      "end_time": "10:00",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-15",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs603",
+      "teacher_id": "tp-3",
+      "day_of_week": "Friday",
+      "start_time": "10:15",
+      "end_time": "11:15",
+      "room": "Lecture Hall 101"
+    },
+    {
+      "id": "tt-16",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "day_of_week": "Friday",
+      "start_time": "11:30",
+      "end_time": "12:30",
+      "room": "Lecture Hall 101"
+    }
+  ],
+  "attendanceSessions": [
+    {
+      "id": "sess-1",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-12",
+      "period": 1,
+      "created_at": "2026-10-12T09:05:00Z"
+    },
+    {
+      "id": "sess-2",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-12",
+      "period": 2,
+      "created_at": "2026-10-12T10:20:00Z"
+    },
+    {
+      "id": "sess-3",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-13",
+      "period": 1,
+      "created_at": "2026-10-13T09:05:00Z"
+    },
+    {
+      "id": "sess-4",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-13",
+      "period": 2,
+      "created_at": "2026-10-13T10:20:00Z"
+    },
+    {
+      "id": "sess-5",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-14",
+      "period": 1,
+      "created_at": "2026-10-14T09:05:00Z"
+    },
+    {
+      "id": "sess-6",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-14",
+      "period": 2,
+      "created_at": "2026-10-14T10:20:00Z"
+    },
+    {
+      "id": "sess-7",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-15",
+      "period": 1,
+      "created_at": "2026-10-15T09:05:00Z"
+    },
+    {
+      "id": "sess-8",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-15",
+      "period": 2,
+      "created_at": "2026-10-15T10:20:00Z"
+    },
+    {
+      "id": "sess-9",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-16",
+      "period": 1,
+      "created_at": "2026-10-16T09:05:00Z"
+    },
+    {
+      "id": "sess-10",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-16",
+      "period": 2,
+      "created_at": "2026-10-16T10:20:00Z"
+    },
+    {
+      "id": "sess-11",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-19",
+      "period": 1,
+      "created_at": "2026-10-19T09:05:00Z"
+    },
+    {
+      "id": "sess-12",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-19",
+      "period": 2,
+      "created_at": "2026-10-19T10:20:00Z"
+    },
+    {
+      "id": "sess-13",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-20",
+      "period": 1,
+      "created_at": "2026-10-20T09:05:00Z"
+    },
+    {
+      "id": "sess-14",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-20",
+      "period": 2,
+      "created_at": "2026-10-20T10:20:00Z"
+    },
+    {
+      "id": "sess-15",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-21",
+      "period": 1,
+      "created_at": "2026-10-21T09:05:00Z"
+    },
+    {
+      "id": "sess-16",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-21",
+      "period": 2,
+      "created_at": "2026-10-21T10:20:00Z"
+    },
+    {
+      "id": "sess-17",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-22",
+      "period": 1,
+      "created_at": "2026-10-22T09:05:00Z"
+    },
+    {
+      "id": "sess-18",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-22",
+      "period": 2,
+      "created_at": "2026-10-22T10:20:00Z"
+    },
+    {
+      "id": "sess-19",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-23",
+      "period": 1,
+      "created_at": "2026-10-23T09:05:00Z"
+    },
+    {
+      "id": "sess-20",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-23",
+      "period": 2,
+      "created_at": "2026-10-23T10:20:00Z"
+    },
+    {
+      "id": "sess-21",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-26",
+      "period": 1,
+      "created_at": "2026-10-26T09:05:00Z"
+    },
+    {
+      "id": "sess-22",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-26",
+      "period": 2,
+      "created_at": "2026-10-26T10:20:00Z"
+    },
+    {
+      "id": "sess-23",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-27",
+      "period": 1,
+      "created_at": "2026-10-27T09:05:00Z"
+    },
+    {
+      "id": "sess-24",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-27",
+      "period": 2,
+      "created_at": "2026-10-27T10:20:00Z"
+    },
+    {
+      "id": "sess-25",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs601",
+      "teacher_id": "tp-1",
+      "date": "2026-10-28",
+      "period": 1,
+      "created_at": "2026-10-28T09:05:00Z"
+    },
+    {
+      "id": "sess-26",
+      "class_id": "cls-csea-6",
+      "subject_id": "sub-cs602",
+      "teacher_id": "tp-2",
+      "date": "2026-10-28",
+      "period": 2,
+      "created_at": "2026-10-28T10:20:00Z"
+    }
+  ],
+  "attendanceRecords": [
+    {
+      "id": "rec-1",
+      "session_id": "sess-1",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-2",
+      "session_id": "sess-2",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-3",
+      "session_id": "sess-1",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-4",
+      "session_id": "sess-2",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-5",
+      "session_id": "sess-1",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-6",
+      "session_id": "sess-2",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-7",
+      "session_id": "sess-1",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-8",
+      "session_id": "sess-2",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-9",
+      "session_id": "sess-1",
+      "student_id": "sp-5",
+      "status": "absent"
+    },
+    {
+      "id": "rec-10",
+      "session_id": "sess-2",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-11",
+      "session_id": "sess-1",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-12",
+      "session_id": "sess-2",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-13",
+      "session_id": "sess-1",
+      "student_id": "sp-7",
+      "status": "absent"
+    },
+    {
+      "id": "rec-14",
+      "session_id": "sess-2",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-15",
+      "session_id": "sess-1",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-16",
+      "session_id": "sess-2",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-17",
+      "session_id": "sess-1",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-18",
+      "session_id": "sess-2",
+      "student_id": "sp-9",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-19",
+      "session_id": "sess-1",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-20",
+      "session_id": "sess-2",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-21",
+      "session_id": "sess-1",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-22",
+      "session_id": "sess-2",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-23",
+      "session_id": "sess-1",
+      "student_id": "sp-12",
+      "status": "absent"
+    },
+    {
+      "id": "rec-24",
+      "session_id": "sess-2",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-25",
+      "session_id": "sess-1",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-26",
+      "session_id": "sess-2",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-27",
+      "session_id": "sess-1",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-28",
+      "session_id": "sess-2",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-29",
+      "session_id": "sess-1",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-30",
+      "session_id": "sess-2",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-31",
+      "session_id": "sess-1",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-32",
+      "session_id": "sess-2",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-33",
+      "session_id": "sess-1",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-34",
+      "session_id": "sess-2",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-35",
+      "session_id": "sess-1",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-36",
+      "session_id": "sess-2",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-37",
+      "session_id": "sess-3",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-38",
+      "session_id": "sess-4",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-39",
+      "session_id": "sess-3",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-40",
+      "session_id": "sess-4",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-41",
+      "session_id": "sess-3",
+      "student_id": "sp-3",
+      "status": "absent"
+    },
+    {
+      "id": "rec-42",
+      "session_id": "sess-4",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-43",
+      "session_id": "sess-3",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-44",
+      "session_id": "sess-4",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-45",
+      "session_id": "sess-3",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-46",
+      "session_id": "sess-4",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-47",
+      "session_id": "sess-3",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-48",
+      "session_id": "sess-4",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-49",
+      "session_id": "sess-3",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-50",
+      "session_id": "sess-4",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-51",
+      "session_id": "sess-3",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-52",
+      "session_id": "sess-4",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-53",
+      "session_id": "sess-3",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-54",
+      "session_id": "sess-4",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-55",
+      "session_id": "sess-3",
+      "student_id": "sp-10",
+      "status": "absent"
+    },
+    {
+      "id": "rec-56",
+      "session_id": "sess-4",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-57",
+      "session_id": "sess-3",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-58",
+      "session_id": "sess-4",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-59",
+      "session_id": "sess-3",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-60",
+      "session_id": "sess-4",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-61",
+      "session_id": "sess-3",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-62",
+      "session_id": "sess-4",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-63",
+      "session_id": "sess-3",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-64",
+      "session_id": "sess-4",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-65",
+      "session_id": "sess-3",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-66",
+      "session_id": "sess-4",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-67",
+      "session_id": "sess-3",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-68",
+      "session_id": "sess-4",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-69",
+      "session_id": "sess-3",
+      "student_id": "sp-17",
+      "status": "absent"
+    },
+    {
+      "id": "rec-70",
+      "session_id": "sess-4",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-71",
+      "session_id": "sess-3",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-72",
+      "session_id": "sess-4",
+      "student_id": "sp-18",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-73",
+      "session_id": "sess-5",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-74",
+      "session_id": "sess-6",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-75",
+      "session_id": "sess-5",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-76",
+      "session_id": "sess-6",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-77",
+      "session_id": "sess-5",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-78",
+      "session_id": "sess-6",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-79",
+      "session_id": "sess-5",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-80",
+      "session_id": "sess-6",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-81",
+      "session_id": "sess-5",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-82",
+      "session_id": "sess-6",
+      "student_id": "sp-5",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-83",
+      "session_id": "sess-5",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-84",
+      "session_id": "sess-6",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-85",
+      "session_id": "sess-5",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-86",
+      "session_id": "sess-6",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-87",
+      "session_id": "sess-5",
+      "student_id": "sp-8",
+      "status": "absent"
+    },
+    {
+      "id": "rec-88",
+      "session_id": "sess-6",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-89",
+      "session_id": "sess-5",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-90",
+      "session_id": "sess-6",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-91",
+      "session_id": "sess-5",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-92",
+      "session_id": "sess-6",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-93",
+      "session_id": "sess-5",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-94",
+      "session_id": "sess-6",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-95",
+      "session_id": "sess-5",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-96",
+      "session_id": "sess-6",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-97",
+      "session_id": "sess-5",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-98",
+      "session_id": "sess-6",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-99",
+      "session_id": "sess-5",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-100",
+      "session_id": "sess-6",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-101",
+      "session_id": "sess-5",
+      "student_id": "sp-15",
+      "status": "absent"
+    },
+    {
+      "id": "rec-102",
+      "session_id": "sess-6",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-103",
+      "session_id": "sess-5",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-104",
+      "session_id": "sess-6",
+      "student_id": "sp-16",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-105",
+      "session_id": "sess-5",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-106",
+      "session_id": "sess-6",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-107",
+      "session_id": "sess-5",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-108",
+      "session_id": "sess-6",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-109",
+      "session_id": "sess-7",
+      "student_id": "sp-1",
+      "status": "leave",
+      "remarks": "Medical leave slip submitted"
+    },
+    {
+      "id": "rec-110",
+      "session_id": "sess-8",
+      "student_id": "sp-1",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-111",
+      "session_id": "sess-7",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-112",
+      "session_id": "sess-8",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-113",
+      "session_id": "sess-7",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-114",
+      "session_id": "sess-8",
+      "student_id": "sp-3",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-115",
+      "session_id": "sess-7",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-116",
+      "session_id": "sess-8",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-117",
+      "session_id": "sess-7",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-118",
+      "session_id": "sess-8",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-119",
+      "session_id": "sess-7",
+      "student_id": "sp-6",
+      "status": "absent"
+    },
+    {
+      "id": "rec-120",
+      "session_id": "sess-8",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-121",
+      "session_id": "sess-7",
+      "student_id": "sp-7",
+      "status": "absent"
+    },
+    {
+      "id": "rec-122",
+      "session_id": "sess-8",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-123",
+      "session_id": "sess-7",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-124",
+      "session_id": "sess-8",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-125",
+      "session_id": "sess-7",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-126",
+      "session_id": "sess-8",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-127",
+      "session_id": "sess-7",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-128",
+      "session_id": "sess-8",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-129",
+      "session_id": "sess-7",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-130",
+      "session_id": "sess-8",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-131",
+      "session_id": "sess-7",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-132",
+      "session_id": "sess-8",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-133",
+      "session_id": "sess-7",
+      "student_id": "sp-13",
+      "status": "absent"
+    },
+    {
+      "id": "rec-134",
+      "session_id": "sess-8",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-135",
+      "session_id": "sess-7",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-136",
+      "session_id": "sess-8",
+      "student_id": "sp-14",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-137",
+      "session_id": "sess-7",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-138",
+      "session_id": "sess-8",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-139",
+      "session_id": "sess-7",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-140",
+      "session_id": "sess-8",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-141",
+      "session_id": "sess-7",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-142",
+      "session_id": "sess-8",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-143",
+      "session_id": "sess-7",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-144",
+      "session_id": "sess-8",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-145",
+      "session_id": "sess-9",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-146",
+      "session_id": "sess-10",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-147",
+      "session_id": "sess-9",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-148",
+      "session_id": "sess-10",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-149",
+      "session_id": "sess-9",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-150",
+      "session_id": "sess-10",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-151",
+      "session_id": "sess-9",
+      "student_id": "sp-4",
+      "status": "absent"
+    },
+    {
+      "id": "rec-152",
+      "session_id": "sess-10",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-153",
+      "session_id": "sess-9",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-154",
+      "session_id": "sess-10",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-155",
+      "session_id": "sess-9",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-156",
+      "session_id": "sess-10",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-157",
+      "session_id": "sess-9",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-158",
+      "session_id": "sess-10",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-159",
+      "session_id": "sess-9",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-160",
+      "session_id": "sess-10",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-161",
+      "session_id": "sess-9",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-162",
+      "session_id": "sess-10",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-163",
+      "session_id": "sess-9",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-164",
+      "session_id": "sess-10",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-165",
+      "session_id": "sess-9",
+      "student_id": "sp-11",
+      "status": "absent"
+    },
+    {
+      "id": "rec-166",
+      "session_id": "sess-10",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-167",
+      "session_id": "sess-9",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-168",
+      "session_id": "sess-10",
+      "student_id": "sp-12",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-169",
+      "session_id": "sess-9",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-170",
+      "session_id": "sess-10",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-171",
+      "session_id": "sess-9",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-172",
+      "session_id": "sess-10",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-173",
+      "session_id": "sess-9",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-174",
+      "session_id": "sess-10",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-175",
+      "session_id": "sess-9",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-176",
+      "session_id": "sess-10",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-177",
+      "session_id": "sess-9",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-178",
+      "session_id": "sess-10",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-179",
+      "session_id": "sess-9",
+      "student_id": "sp-18",
+      "status": "absent"
+    },
+    {
+      "id": "rec-180",
+      "session_id": "sess-10",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-181",
+      "session_id": "sess-11",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-182",
+      "session_id": "sess-12",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-183",
+      "session_id": "sess-11",
+      "student_id": "sp-2",
+      "status": "absent"
+    },
+    {
+      "id": "rec-184",
+      "session_id": "sess-12",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-185",
+      "session_id": "sess-11",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-186",
+      "session_id": "sess-12",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-187",
+      "session_id": "sess-11",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-188",
+      "session_id": "sess-12",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-189",
+      "session_id": "sess-11",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-190",
+      "session_id": "sess-12",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-191",
+      "session_id": "sess-11",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-192",
+      "session_id": "sess-12",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-193",
+      "session_id": "sess-11",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-194",
+      "session_id": "sess-12",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-195",
+      "session_id": "sess-11",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-196",
+      "session_id": "sess-12",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-197",
+      "session_id": "sess-11",
+      "student_id": "sp-9",
+      "status": "absent"
+    },
+    {
+      "id": "rec-198",
+      "session_id": "sess-12",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-199",
+      "session_id": "sess-11",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-200",
+      "session_id": "sess-12",
+      "student_id": "sp-10",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-201",
+      "session_id": "sess-11",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-202",
+      "session_id": "sess-12",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-203",
+      "session_id": "sess-11",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-204",
+      "session_id": "sess-12",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-205",
+      "session_id": "sess-11",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-206",
+      "session_id": "sess-12",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-207",
+      "session_id": "sess-11",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-208",
+      "session_id": "sess-12",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-209",
+      "session_id": "sess-11",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-210",
+      "session_id": "sess-12",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-211",
+      "session_id": "sess-11",
+      "student_id": "sp-16",
+      "status": "absent"
+    },
+    {
+      "id": "rec-212",
+      "session_id": "sess-12",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-213",
+      "session_id": "sess-11",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-214",
+      "session_id": "sess-12",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-215",
+      "session_id": "sess-11",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-216",
+      "session_id": "sess-12",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-217",
+      "session_id": "sess-13",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-218",
+      "session_id": "sess-14",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-219",
+      "session_id": "sess-13",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-220",
+      "session_id": "sess-14",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-221",
+      "session_id": "sess-13",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-222",
+      "session_id": "sess-14",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-223",
+      "session_id": "sess-13",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-224",
+      "session_id": "sess-14",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-225",
+      "session_id": "sess-13",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-226",
+      "session_id": "sess-14",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-227",
+      "session_id": "sess-13",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-228",
+      "session_id": "sess-14",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-229",
+      "session_id": "sess-13",
+      "student_id": "sp-7",
+      "status": "absent"
+    },
+    {
+      "id": "rec-230",
+      "session_id": "sess-14",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-231",
+      "session_id": "sess-13",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-232",
+      "session_id": "sess-14",
+      "student_id": "sp-8",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-233",
+      "session_id": "sess-13",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-234",
+      "session_id": "sess-14",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-235",
+      "session_id": "sess-13",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-236",
+      "session_id": "sess-14",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-237",
+      "session_id": "sess-13",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-238",
+      "session_id": "sess-14",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-239",
+      "session_id": "sess-13",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-240",
+      "session_id": "sess-14",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-241",
+      "session_id": "sess-13",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-242",
+      "session_id": "sess-14",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-243",
+      "session_id": "sess-13",
+      "student_id": "sp-14",
+      "status": "absent"
+    },
+    {
+      "id": "rec-244",
+      "session_id": "sess-14",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-245",
+      "session_id": "sess-13",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-246",
+      "session_id": "sess-14",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-247",
+      "session_id": "sess-13",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-248",
+      "session_id": "sess-14",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-249",
+      "session_id": "sess-13",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-250",
+      "session_id": "sess-14",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-251",
+      "session_id": "sess-13",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-252",
+      "session_id": "sess-14",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-253",
+      "session_id": "sess-15",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-254",
+      "session_id": "sess-16",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-255",
+      "session_id": "sess-15",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-256",
+      "session_id": "sess-16",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-257",
+      "session_id": "sess-15",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-258",
+      "session_id": "sess-16",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-259",
+      "session_id": "sess-15",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-260",
+      "session_id": "sess-16",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-261",
+      "session_id": "sess-15",
+      "student_id": "sp-5",
+      "status": "absent"
+    },
+    {
+      "id": "rec-262",
+      "session_id": "sess-16",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-263",
+      "session_id": "sess-15",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-264",
+      "session_id": "sess-16",
+      "student_id": "sp-6",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-265",
+      "session_id": "sess-15",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-266",
+      "session_id": "sess-16",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-267",
+      "session_id": "sess-15",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-268",
+      "session_id": "sess-16",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-269",
+      "session_id": "sess-15",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-270",
+      "session_id": "sess-16",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-271",
+      "session_id": "sess-15",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-272",
+      "session_id": "sess-16",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-273",
+      "session_id": "sess-15",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-274",
+      "session_id": "sess-16",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-275",
+      "session_id": "sess-15",
+      "student_id": "sp-12",
+      "status": "absent"
+    },
+    {
+      "id": "rec-276",
+      "session_id": "sess-16",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-277",
+      "session_id": "sess-15",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-278",
+      "session_id": "sess-16",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-279",
+      "session_id": "sess-15",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-280",
+      "session_id": "sess-16",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-281",
+      "session_id": "sess-15",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-282",
+      "session_id": "sess-16",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-283",
+      "session_id": "sess-15",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-284",
+      "session_id": "sess-16",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-285",
+      "session_id": "sess-15",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-286",
+      "session_id": "sess-16",
+      "student_id": "sp-17",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-287",
+      "session_id": "sess-15",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-288",
+      "session_id": "sess-16",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-289",
+      "session_id": "sess-17",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-290",
+      "session_id": "sess-18",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-291",
+      "session_id": "sess-17",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-292",
+      "session_id": "sess-18",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-293",
+      "session_id": "sess-17",
+      "student_id": "sp-3",
+      "status": "absent"
+    },
+    {
+      "id": "rec-294",
+      "session_id": "sess-18",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-295",
+      "session_id": "sess-17",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-296",
+      "session_id": "sess-18",
+      "student_id": "sp-4",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-297",
+      "session_id": "sess-17",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-298",
+      "session_id": "sess-18",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-299",
+      "session_id": "sess-17",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-300",
+      "session_id": "sess-18",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-301",
+      "session_id": "sess-17",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-302",
+      "session_id": "sess-18",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-303",
+      "session_id": "sess-17",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-304",
+      "session_id": "sess-18",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-305",
+      "session_id": "sess-17",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-306",
+      "session_id": "sess-18",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-307",
+      "session_id": "sess-17",
+      "student_id": "sp-10",
+      "status": "absent"
+    },
+    {
+      "id": "rec-308",
+      "session_id": "sess-18",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-309",
+      "session_id": "sess-17",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-310",
+      "session_id": "sess-18",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-311",
+      "session_id": "sess-17",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-312",
+      "session_id": "sess-18",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-313",
+      "session_id": "sess-17",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-314",
+      "session_id": "sess-18",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-315",
+      "session_id": "sess-17",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-316",
+      "session_id": "sess-18",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-317",
+      "session_id": "sess-17",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-318",
+      "session_id": "sess-18",
+      "student_id": "sp-15",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-319",
+      "session_id": "sess-17",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-320",
+      "session_id": "sess-18",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-321",
+      "session_id": "sess-17",
+      "student_id": "sp-17",
+      "status": "absent"
+    },
+    {
+      "id": "rec-322",
+      "session_id": "sess-18",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-323",
+      "session_id": "sess-17",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-324",
+      "session_id": "sess-18",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-325",
+      "session_id": "sess-19",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-326",
+      "session_id": "sess-20",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-327",
+      "session_id": "sess-19",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-328",
+      "session_id": "sess-20",
+      "student_id": "sp-2",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-329",
+      "session_id": "sess-19",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-330",
+      "session_id": "sess-20",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-331",
+      "session_id": "sess-19",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-332",
+      "session_id": "sess-20",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-333",
+      "session_id": "sess-19",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-334",
+      "session_id": "sess-20",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-335",
+      "session_id": "sess-19",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-336",
+      "session_id": "sess-20",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-337",
+      "session_id": "sess-19",
+      "student_id": "sp-7",
+      "status": "absent"
+    },
+    {
+      "id": "rec-338",
+      "session_id": "sess-20",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-339",
+      "session_id": "sess-19",
+      "student_id": "sp-8",
+      "status": "absent"
+    },
+    {
+      "id": "rec-340",
+      "session_id": "sess-20",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-341",
+      "session_id": "sess-19",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-342",
+      "session_id": "sess-20",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-343",
+      "session_id": "sess-19",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-344",
+      "session_id": "sess-20",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-345",
+      "session_id": "sess-19",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-346",
+      "session_id": "sess-20",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-347",
+      "session_id": "sess-19",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-348",
+      "session_id": "sess-20",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-349",
+      "session_id": "sess-19",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-350",
+      "session_id": "sess-20",
+      "student_id": "sp-13",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-351",
+      "session_id": "sess-19",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-352",
+      "session_id": "sess-20",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-353",
+      "session_id": "sess-19",
+      "student_id": "sp-15",
+      "status": "absent"
+    },
+    {
+      "id": "rec-354",
+      "session_id": "sess-20",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-355",
+      "session_id": "sess-19",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-356",
+      "session_id": "sess-20",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-357",
+      "session_id": "sess-19",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-358",
+      "session_id": "sess-20",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-359",
+      "session_id": "sess-19",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-360",
+      "session_id": "sess-20",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-361",
+      "session_id": "sess-21",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-362",
+      "session_id": "sess-22",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-363",
+      "session_id": "sess-21",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-364",
+      "session_id": "sess-22",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-365",
+      "session_id": "sess-21",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-366",
+      "session_id": "sess-22",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-367",
+      "session_id": "sess-21",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-368",
+      "session_id": "sess-22",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-369",
+      "session_id": "sess-21",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-370",
+      "session_id": "sess-22",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-371",
+      "session_id": "sess-21",
+      "student_id": "sp-6",
+      "status": "absent"
+    },
+    {
+      "id": "rec-372",
+      "session_id": "sess-22",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-373",
+      "session_id": "sess-21",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-374",
+      "session_id": "sess-22",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-375",
+      "session_id": "sess-21",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-376",
+      "session_id": "sess-22",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-377",
+      "session_id": "sess-21",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-378",
+      "session_id": "sess-22",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-379",
+      "session_id": "sess-21",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-380",
+      "session_id": "sess-22",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-381",
+      "session_id": "sess-21",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-382",
+      "session_id": "sess-22",
+      "student_id": "sp-11",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-383",
+      "session_id": "sess-21",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-384",
+      "session_id": "sess-22",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-385",
+      "session_id": "sess-21",
+      "student_id": "sp-13",
+      "status": "absent"
+    },
+    {
+      "id": "rec-386",
+      "session_id": "sess-22",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-387",
+      "session_id": "sess-21",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-388",
+      "session_id": "sess-22",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-389",
+      "session_id": "sess-21",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-390",
+      "session_id": "sess-22",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-391",
+      "session_id": "sess-21",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-392",
+      "session_id": "sess-22",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-393",
+      "session_id": "sess-21",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-394",
+      "session_id": "sess-22",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-395",
+      "session_id": "sess-21",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-396",
+      "session_id": "sess-22",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-397",
+      "session_id": "sess-23",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-398",
+      "session_id": "sess-24",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-399",
+      "session_id": "sess-23",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-400",
+      "session_id": "sess-24",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-401",
+      "session_id": "sess-23",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-402",
+      "session_id": "sess-24",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-403",
+      "session_id": "sess-23",
+      "student_id": "sp-4",
+      "status": "absent"
+    },
+    {
+      "id": "rec-404",
+      "session_id": "sess-24",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-405",
+      "session_id": "sess-23",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-406",
+      "session_id": "sess-24",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-407",
+      "session_id": "sess-23",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-408",
+      "session_id": "sess-24",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-409",
+      "session_id": "sess-23",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-410",
+      "session_id": "sess-24",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-411",
+      "session_id": "sess-23",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-412",
+      "session_id": "sess-24",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-413",
+      "session_id": "sess-23",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-414",
+      "session_id": "sess-24",
+      "student_id": "sp-9",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    },
+    {
+      "id": "rec-415",
+      "session_id": "sess-23",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-416",
+      "session_id": "sess-24",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-417",
+      "session_id": "sess-23",
+      "student_id": "sp-11",
+      "status": "absent"
+    },
+    {
+      "id": "rec-418",
+      "session_id": "sess-24",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-419",
+      "session_id": "sess-23",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-420",
+      "session_id": "sess-24",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-421",
+      "session_id": "sess-23",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-422",
+      "session_id": "sess-24",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-423",
+      "session_id": "sess-23",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-424",
+      "session_id": "sess-24",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-425",
+      "session_id": "sess-23",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-426",
+      "session_id": "sess-24",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-427",
+      "session_id": "sess-23",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-428",
+      "session_id": "sess-24",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-429",
+      "session_id": "sess-23",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-430",
+      "session_id": "sess-24",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-431",
+      "session_id": "sess-23",
+      "student_id": "sp-18",
+      "status": "absent"
+    },
+    {
+      "id": "rec-432",
+      "session_id": "sess-24",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-433",
+      "session_id": "sess-25",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-434",
+      "session_id": "sess-26",
+      "student_id": "sp-1",
+      "status": "present"
+    },
+    {
+      "id": "rec-435",
+      "session_id": "sess-25",
+      "student_id": "sp-2",
+      "status": "absent"
+    },
+    {
+      "id": "rec-436",
+      "session_id": "sess-26",
+      "student_id": "sp-2",
+      "status": "present"
+    },
+    {
+      "id": "rec-437",
+      "session_id": "sess-25",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-438",
+      "session_id": "sess-26",
+      "student_id": "sp-3",
+      "status": "present"
+    },
+    {
+      "id": "rec-439",
+      "session_id": "sess-25",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-440",
+      "session_id": "sess-26",
+      "student_id": "sp-4",
+      "status": "present"
+    },
+    {
+      "id": "rec-441",
+      "session_id": "sess-25",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-442",
+      "session_id": "sess-26",
+      "student_id": "sp-5",
+      "status": "present"
+    },
+    {
+      "id": "rec-443",
+      "session_id": "sess-25",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-444",
+      "session_id": "sess-26",
+      "student_id": "sp-6",
+      "status": "present"
+    },
+    {
+      "id": "rec-445",
+      "session_id": "sess-25",
+      "student_id": "sp-7",
+      "status": "absent"
+    },
+    {
+      "id": "rec-446",
+      "session_id": "sess-26",
+      "student_id": "sp-7",
+      "status": "present"
+    },
+    {
+      "id": "rec-447",
+      "session_id": "sess-25",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-448",
+      "session_id": "sess-26",
+      "student_id": "sp-8",
+      "status": "present"
+    },
+    {
+      "id": "rec-449",
+      "session_id": "sess-25",
+      "student_id": "sp-9",
+      "status": "absent"
+    },
+    {
+      "id": "rec-450",
+      "session_id": "sess-26",
+      "student_id": "sp-9",
+      "status": "present"
+    },
+    {
+      "id": "rec-451",
+      "session_id": "sess-25",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-452",
+      "session_id": "sess-26",
+      "student_id": "sp-10",
+      "status": "present"
+    },
+    {
+      "id": "rec-453",
+      "session_id": "sess-25",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-454",
+      "session_id": "sess-26",
+      "student_id": "sp-11",
+      "status": "present"
+    },
+    {
+      "id": "rec-455",
+      "session_id": "sess-25",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-456",
+      "session_id": "sess-26",
+      "student_id": "sp-12",
+      "status": "present"
+    },
+    {
+      "id": "rec-457",
+      "session_id": "sess-25",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-458",
+      "session_id": "sess-26",
+      "student_id": "sp-13",
+      "status": "present"
+    },
+    {
+      "id": "rec-459",
+      "session_id": "sess-25",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-460",
+      "session_id": "sess-26",
+      "student_id": "sp-14",
+      "status": "present"
+    },
+    {
+      "id": "rec-461",
+      "session_id": "sess-25",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-462",
+      "session_id": "sess-26",
+      "student_id": "sp-15",
+      "status": "present"
+    },
+    {
+      "id": "rec-463",
+      "session_id": "sess-25",
+      "student_id": "sp-16",
+      "status": "absent"
+    },
+    {
+      "id": "rec-464",
+      "session_id": "sess-26",
+      "student_id": "sp-16",
+      "status": "present"
+    },
+    {
+      "id": "rec-465",
+      "session_id": "sess-25",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-466",
+      "session_id": "sess-26",
+      "student_id": "sp-17",
+      "status": "present"
+    },
+    {
+      "id": "rec-467",
+      "session_id": "sess-25",
+      "student_id": "sp-18",
+      "status": "present"
+    },
+    {
+      "id": "rec-468",
+      "session_id": "sess-26",
+      "student_id": "sp-18",
+      "status": "leave",
+      "remarks": "College sports meet representation"
+    }
+  ],
+  "assessments": [
+    {
+      "id": "asm-1",
+      "title": "Internal Assessment 1 - DBMS",
+      "subject_id": "sub-cs601",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-1",
+      "type": "internal_1",
+      "max_marks": 50,
+      "date": "2026-09-25"
+    },
+    {
+      "id": "asm-2",
+      "title": "Internal Assessment 2 - Relational Normalization & SQL",
+      "subject_id": "sub-cs601",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-1",
+      "type": "internal_2",
+      "max_marks": 50,
+      "date": "2026-10-20"
+    },
+    {
+      "id": "asm-3",
+      "title": "Mid-Term Exam - Computer Networks",
+      "subject_id": "sub-cs602",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-2",
+      "type": "exam",
+      "max_marks": 100,
+      "date": "2026-10-15"
+    },
+    {
+      "id": "asm-4",
+      "title": "Cloud Architecture & Web Services Test",
+      "subject_id": "sub-cs603",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-3",
+      "type": "quiz",
+      "max_marks": 25,
+      "date": "2026-10-05"
+    },
+    {
+      "id": "asm-5",
+      "title": "Agile & DevOps Practical Assessment",
+      "subject_id": "sub-cs604",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-4",
+      "type": "assignment",
+      "max_marks": 50,
+      "date": "2026-10-10"
+    }
+  ],
+  "marks": [
+    {
+      "id": "mrk-1",
+      "assessment_id": "asm-1",
+      "student_id": "sp-1",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-2",
+      "assessment_id": "asm-1",
+      "student_id": "sp-2",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-3",
+      "assessment_id": "asm-1",
+      "student_id": "sp-3",
+      "marks_obtained": 46,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-4",
+      "assessment_id": "asm-1",
+      "student_id": "sp-4",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-5",
+      "assessment_id": "asm-1",
+      "student_id": "sp-5",
+      "marks_obtained": 38,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-6",
+      "assessment_id": "asm-1",
+      "student_id": "sp-6",
+      "marks_obtained": 42,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-7",
+      "assessment_id": "asm-1",
+      "student_id": "sp-7",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-8",
+      "assessment_id": "asm-1",
+      "student_id": "sp-8",
+      "marks_obtained": 34,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-9",
+      "assessment_id": "asm-1",
+      "student_id": "sp-9",
+      "marks_obtained": 37,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-10",
+      "assessment_id": "asm-1",
+      "student_id": "sp-10",
+      "marks_obtained": 41,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-11",
+      "assessment_id": "asm-1",
+      "student_id": "sp-11",
+      "marks_obtained": 44,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-12",
+      "assessment_id": "asm-1",
+      "student_id": "sp-12",
+      "marks_obtained": 33,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-13",
+      "assessment_id": "asm-1",
+      "student_id": "sp-13",
+      "marks_obtained": 36,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-14",
+      "assessment_id": "asm-1",
+      "student_id": "sp-14",
+      "marks_obtained": 40,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-15",
+      "assessment_id": "asm-1",
+      "student_id": "sp-15",
+      "marks_obtained": 43,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-16",
+      "assessment_id": "asm-1",
+      "student_id": "sp-16",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-17",
+      "assessment_id": "asm-1",
+      "student_id": "sp-17",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-18",
+      "assessment_id": "asm-1",
+      "student_id": "sp-18",
+      "marks_obtained": 39,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-19",
+      "assessment_id": "asm-2",
+      "student_id": "sp-1",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-20",
+      "assessment_id": "asm-2",
+      "student_id": "sp-2",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-21",
+      "assessment_id": "asm-2",
+      "student_id": "sp-3",
+      "marks_obtained": 46,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-22",
+      "assessment_id": "asm-2",
+      "student_id": "sp-4",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-23",
+      "assessment_id": "asm-2",
+      "student_id": "sp-5",
+      "marks_obtained": 38,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-24",
+      "assessment_id": "asm-2",
+      "student_id": "sp-6",
+      "marks_obtained": 42,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-25",
+      "assessment_id": "asm-2",
+      "student_id": "sp-7",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-26",
+      "assessment_id": "asm-2",
+      "student_id": "sp-8",
+      "marks_obtained": 34,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-27",
+      "assessment_id": "asm-2",
+      "student_id": "sp-9",
+      "marks_obtained": 37,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-28",
+      "assessment_id": "asm-2",
+      "student_id": "sp-10",
+      "marks_obtained": 41,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-29",
+      "assessment_id": "asm-2",
+      "student_id": "sp-11",
+      "marks_obtained": 44,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-30",
+      "assessment_id": "asm-2",
+      "student_id": "sp-12",
+      "marks_obtained": 33,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-31",
+      "assessment_id": "asm-2",
+      "student_id": "sp-13",
+      "marks_obtained": 36,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-32",
+      "assessment_id": "asm-2",
+      "student_id": "sp-14",
+      "marks_obtained": 40,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-33",
+      "assessment_id": "asm-2",
+      "student_id": "sp-15",
+      "marks_obtained": 43,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-34",
+      "assessment_id": "asm-2",
+      "student_id": "sp-16",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-35",
+      "assessment_id": "asm-2",
+      "student_id": "sp-17",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-36",
+      "assessment_id": "asm-2",
+      "student_id": "sp-18",
+      "marks_obtained": 39,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-37",
+      "assessment_id": "asm-3",
+      "student_id": "sp-1",
+      "marks_obtained": 94,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-38",
+      "assessment_id": "asm-3",
+      "student_id": "sp-2",
+      "marks_obtained": 89,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-39",
+      "assessment_id": "asm-3",
+      "student_id": "sp-3",
+      "marks_obtained": 92,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-40",
+      "assessment_id": "asm-3",
+      "student_id": "sp-4",
+      "marks_obtained": 69,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-41",
+      "assessment_id": "asm-3",
+      "student_id": "sp-5",
+      "marks_obtained": 76,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-42",
+      "assessment_id": "asm-3",
+      "student_id": "sp-6",
+      "marks_obtained": 83,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-43",
+      "assessment_id": "asm-3",
+      "student_id": "sp-7",
+      "marks_obtained": 90,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-44",
+      "assessment_id": "asm-3",
+      "student_id": "sp-8",
+      "marks_obtained": 67,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-45",
+      "assessment_id": "asm-3",
+      "student_id": "sp-9",
+      "marks_obtained": 74,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-46",
+      "assessment_id": "asm-3",
+      "student_id": "sp-10",
+      "marks_obtained": 81,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-47",
+      "assessment_id": "asm-3",
+      "student_id": "sp-11",
+      "marks_obtained": 88,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-48",
+      "assessment_id": "asm-3",
+      "student_id": "sp-12",
+      "marks_obtained": 65,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-49",
+      "assessment_id": "asm-3",
+      "student_id": "sp-13",
+      "marks_obtained": 72,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-50",
+      "assessment_id": "asm-3",
+      "student_id": "sp-14",
+      "marks_obtained": 79,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-51",
+      "assessment_id": "asm-3",
+      "student_id": "sp-15",
+      "marks_obtained": 86,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-52",
+      "assessment_id": "asm-3",
+      "student_id": "sp-16",
+      "marks_obtained": 93,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-53",
+      "assessment_id": "asm-3",
+      "student_id": "sp-17",
+      "marks_obtained": 70,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-54",
+      "assessment_id": "asm-3",
+      "student_id": "sp-18",
+      "marks_obtained": 77,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-55",
+      "assessment_id": "asm-4",
+      "student_id": "sp-1",
+      "marks_obtained": 24,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-56",
+      "assessment_id": "asm-4",
+      "student_id": "sp-2",
+      "marks_obtained": 22,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-57",
+      "assessment_id": "asm-4",
+      "student_id": "sp-3",
+      "marks_obtained": 23,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-58",
+      "assessment_id": "asm-4",
+      "student_id": "sp-4",
+      "marks_obtained": 17,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-59",
+      "assessment_id": "asm-4",
+      "student_id": "sp-5",
+      "marks_obtained": 19,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-60",
+      "assessment_id": "asm-4",
+      "student_id": "sp-6",
+      "marks_obtained": 21,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-61",
+      "assessment_id": "asm-4",
+      "student_id": "sp-7",
+      "marks_obtained": 23,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-62",
+      "assessment_id": "asm-4",
+      "student_id": "sp-8",
+      "marks_obtained": 17,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-63",
+      "assessment_id": "asm-4",
+      "student_id": "sp-9",
+      "marks_obtained": 19,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-64",
+      "assessment_id": "asm-4",
+      "student_id": "sp-10",
+      "marks_obtained": 20,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-65",
+      "assessment_id": "asm-4",
+      "student_id": "sp-11",
+      "marks_obtained": 22,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-66",
+      "assessment_id": "asm-4",
+      "student_id": "sp-12",
+      "marks_obtained": 16,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-67",
+      "assessment_id": "asm-4",
+      "student_id": "sp-13",
+      "marks_obtained": 18,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-68",
+      "assessment_id": "asm-4",
+      "student_id": "sp-14",
+      "marks_obtained": 20,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-69",
+      "assessment_id": "asm-4",
+      "student_id": "sp-15",
+      "marks_obtained": 22,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-70",
+      "assessment_id": "asm-4",
+      "student_id": "sp-16",
+      "marks_obtained": 23,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-71",
+      "assessment_id": "asm-4",
+      "student_id": "sp-17",
+      "marks_obtained": 18,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-72",
+      "assessment_id": "asm-4",
+      "student_id": "sp-18",
+      "marks_obtained": 19,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-73",
+      "assessment_id": "asm-5",
+      "student_id": "sp-1",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-74",
+      "assessment_id": "asm-5",
+      "student_id": "sp-2",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-75",
+      "assessment_id": "asm-5",
+      "student_id": "sp-3",
+      "marks_obtained": 46,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-76",
+      "assessment_id": "asm-5",
+      "student_id": "sp-4",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-77",
+      "assessment_id": "asm-5",
+      "student_id": "sp-5",
+      "marks_obtained": 38,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-78",
+      "assessment_id": "asm-5",
+      "student_id": "sp-6",
+      "marks_obtained": 42,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-79",
+      "assessment_id": "asm-5",
+      "student_id": "sp-7",
+      "marks_obtained": 45,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-80",
+      "assessment_id": "asm-5",
+      "student_id": "sp-8",
+      "marks_obtained": 34,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-81",
+      "assessment_id": "asm-5",
+      "student_id": "sp-9",
+      "marks_obtained": 37,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-82",
+      "assessment_id": "asm-5",
+      "student_id": "sp-10",
+      "marks_obtained": 41,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-83",
+      "assessment_id": "asm-5",
+      "student_id": "sp-11",
+      "marks_obtained": 44,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-84",
+      "assessment_id": "asm-5",
+      "student_id": "sp-12",
+      "marks_obtained": 33,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-85",
+      "assessment_id": "asm-5",
+      "student_id": "sp-13",
+      "marks_obtained": 36,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-86",
+      "assessment_id": "asm-5",
+      "student_id": "sp-14",
+      "marks_obtained": 40,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-87",
+      "assessment_id": "asm-5",
+      "student_id": "sp-15",
+      "marks_obtained": 43,
+      "feedback": "Good performance. Review query optimization techniques."
+    },
+    {
+      "id": "mrk-88",
+      "assessment_id": "asm-5",
+      "student_id": "sp-16",
+      "marks_obtained": 47,
+      "feedback": "Outstanding conceptual clarity and execution."
+    },
+    {
+      "id": "mrk-89",
+      "assessment_id": "asm-5",
+      "student_id": "sp-17",
+      "marks_obtained": 35,
+      "feedback": "Needs improvement on edge cases."
+    },
+    {
+      "id": "mrk-90",
+      "assessment_id": "asm-5",
+      "student_id": "sp-18",
+      "marks_obtained": 39,
+      "feedback": "Good performance. Review query optimization techniques."
+    }
+  ],
+  "assignments": [
+    {
+      "id": "asg-1",
+      "title": "Distributed Transactions & 2PC Simulation",
+      "description": "Implement a two-phase commit protocol simulation demonstrating coordinator recovery and participant timeout handling.",
+      "subject_id": "sub-cs601",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-1",
+      "issue_date": "2026-10-10",
+      "due_date": "2026-11-05",
+      "max_score": 100
+    },
+    {
+      "id": "asg-2",
+      "title": "TCP Congestion Control & Bufferbloat Analysis",
+      "description": "Simulate Tahoe, Reno, and BBR algorithms under varying packet loss and latency. Provide throughput-delay plots.",
+      "subject_id": "sub-cs602",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-2",
+      "issue_date": "2026-10-12",
+      "due_date": "2026-10-25",
+      "max_score": 50
+    },
+    {
+      "id": "asg-3",
+      "title": "Containerized Microservices CI/CD Pipeline",
+      "description": "Build a Dockerized multi-tier web application with automated GitHub Actions testing and health check endpoints.",
+      "subject_id": "sub-cs603",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-3",
+      "issue_date": "2026-10-15",
+      "due_date": "2026-11-10",
+      "max_score": 100
+    },
+    {
+      "id": "asg-4",
+      "title": "Heuristic Search & A* Pathfinding Benchmark",
+      "description": "Implement A* search with Euclidean and Manhattan heuristics. Compare nodes expanded on 50x50 grid mazes.",
+      "subject_id": "sub-cs605",
+      "class_id": "cls-csea-6",
+      "teacher_id": "tp-3",
+      "issue_date": "2026-10-20",
+      "due_date": "2026-11-12",
+      "max_score": 50
+    }
+  ],
+  "submissions": [
+    {
+      "id": "subm-1",
+      "assignment_id": "asg-2",
+      "student_id": "sp-1",
+      "file_name": "alex_morgan_tcp_analysis.pdf",
+      "file_path": "/uploads/alex_morgan_tcp_analysis.pdf",
+      "submitted_at": "2026-10-24T18:30:00Z",
+      "status": "evaluated",
+      "score": 48,
+      "feedback": "Excellent comparison plots and thorough evaluation of BBR vs Reno.",
+      "evaluated_at": "2026-10-26T14:00:00Z"
+    },
+    {
+      "id": "subm-2",
+      "assignment_id": "asg-1",
+      "student_id": "sp-1",
+      "file_name": "alex_morgan_2pc_simulation.zip",
+      "file_path": "/uploads/alex_morgan_2pc_simulation.zip",
+      "submitted_at": "2026-10-28T11:15:00Z",
+      "status": "submitted"
+    },
+    {
+      "id": "subm-3",
+      "assignment_id": "asg-2",
+      "student_id": "sp-2",
+      "file_name": "priya_patel_tcp_reno.pdf",
+      "file_path": "/uploads/priya_patel_tcp_reno.pdf",
+      "submitted_at": "2026-10-25T20:10:00Z",
+      "status": "evaluated",
+      "score": 45,
+      "feedback": "Very solid implementation and accurate mathematical analysis.",
+      "evaluated_at": "2026-10-26T15:20:00Z"
+    },
+    {
+      "id": "subm-4",
+      "assignment_id": "asg-2",
+      "student_id": "sp-3",
+      "file_name": "marcus_tcp_report.pdf",
+      "file_path": "/uploads/marcus_tcp_report.pdf",
+      "submitted_at": "2026-10-26T02:00:00Z",
+      "status": "late",
+      "score": 40,
+      "feedback": "Submitted after the midnight deadline, but great technical content.",
+      "evaluated_at": "2026-10-26T16:00:00Z"
+    }
+  ],
+  "announcements": [
+    {
+      "id": "ann-1",
+      "title": "End-Semester Examination Schedule Published",
+      "content": "The official timetable for Fall 2026 End-Semester Examinations is now finalized. Examinations commence on December 1st, 2026. Hall tickets will be issued starting November 20th.",
+      "category": "exam",
+      "target_role": "all",
+      "author_id": "usr-admin-1",
+      "author_name": "Dr. Evelyn Vance",
+      "author_role": "admin",
+      "created_at": "2026-10-25T10:00:00Z",
+      "is_archived": false
+    },
+    {
+      "id": "ann-2",
+      "title": "Guest Lecture: Scalable Microservices Architecture",
+      "content": "We are thrilled to host Dr. Liam Ross, Principal Infrastructure Architect at CloudScale Inc., this Friday at 3:00 PM in Main Auditorium. Attendance is recommended for all CSE Sem 6 students.",
+      "category": "academic",
+      "target_role": "students",
+      "target_class_id": "cls-csea-6",
+      "author_id": "usr-tch-1",
+      "author_name": "Prof. Sarah Jenkins",
+      "author_role": "teacher",
+      "created_at": "2026-10-27T08:30:00Z",
+      "is_archived": false
+    },
+    {
+      "id": "ann-3",
+      "title": "Annual Hackathon SSMS HackCon 2026 Registration Open",
+      "content": "SSMS HackCon registration is open until November 8. Prizes worth $10,000 to be won across Web3, AI in Healthcare, and Sustainable Computing tracks.",
+      "category": "college",
+      "target_role": "all",
+      "author_id": "usr-admin-1",
+      "author_name": "Dr. Evelyn Vance",
+      "author_role": "admin",
+      "created_at": "2026-10-22T14:00:00Z",
+      "is_archived": false
+    },
+    {
+      "id": "ann-4",
+      "title": "Database Lab Project Demonstration Guidelines",
+      "content": "All lab teams must ensure schema dumps and Postman collections are pushed to your team repositories prior to Friday demonstration slots.",
+      "category": "academic",
+      "target_role": "class",
+      "target_class_id": "cls-csea-6",
+      "author_id": "usr-tch-1",
+      "author_name": "Prof. Sarah Jenkins",
+      "author_role": "teacher",
+      "created_at": "2026-10-28T16:00:00Z",
+      "is_archived": false
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "user_id": "usr-std-1",
+      "title": "Assignment Graded",
+      "message": "Prof. Robert Chen graded your assignment \"TCP Congestion Control & Bufferbloat Analysis\" with score 48/50.",
+      "type": "marks",
+      "is_read": false,
+      "link": "/student/assignments",
+      "created_at": "2026-10-26T14:05:00Z"
+    },
+    {
+      "id": "notif-2",
+      "user_id": "usr-std-1",
+      "title": "Upcoming Assignment Deadline",
+      "message": "Assignment \"Distributed Transactions & 2PC Simulation\" is due on November 5th.",
+      "type": "assignment",
+      "is_read": false,
+      "link": "/student/assignments",
+      "created_at": "2026-10-28T09:00:00Z"
+    },
+    {
+      "id": "notif-3",
+      "user_id": "usr-std-1",
+      "title": "Exam Schedule Announced",
+      "message": "The schedule for Fall 2026 examinations has been published by the administration.",
+      "type": "exam",
+      "is_read": true,
+      "link": "/student/notifications",
+      "created_at": "2026-10-25T10:05:00Z"
+    },
+    {
+      "id": "notif-4",
+      "user_id": "usr-std-7",
+      "title": "Low Attendance Alert",
+      "message": "Your overall attendance is currently at 68%, which falls below the mandatory 75% threshold.",
+      "type": "attendance",
+      "is_read": false,
+      "link": "/student/attendance",
+      "created_at": "2026-10-28T17:00:00Z"
+    },
+    {
+      "id": "notif-5",
+      "user_id": "usr-tch-1",
+      "title": "New Assignment Submissions",
+      "message": "14 new submissions received for \"Distributed Transactions & 2PC Simulation\".",
+      "type": "assignment",
+      "is_read": false,
+      "link": "/teacher/assignments",
+      "created_at": "2026-10-28T12:00:00Z"
+    }
+  ],
+  "studyTasks": [
+    {
+      "id": "tsk-1",
+      "student_id": "sp-1",
+      "title": "Finish 2PC Coordinator Recovery Test Cases",
+      "description": "Write unit tests simulating network partitions and timeout handling.",
+      "subject_id": "sub-cs601",
+      "priority": "high",
+      "due_date": "2026-11-03",
+      "is_completed": false,
+      "created_at": "2026-10-26T11:00:00Z"
+    },
+    {
+      "id": "tsk-2",
+      "student_id": "sp-1",
+      "title": "Revise B-Tree & LSM Tree Index Mechanics",
+      "description": "Prepare summary notes comparing write amplification vs read latency.",
+      "subject_id": "sub-cs601",
+      "priority": "medium",
+      "due_date": "2026-11-08",
+      "is_completed": true,
+      "created_at": "2026-10-20T10:00:00Z"
+    },
+    {
+      "id": "tsk-3",
+      "student_id": "sp-1",
+      "title": "Review Chapter 5 of Peterson & Davie on BGP Routing",
+      "description": "Focus on AS path attributes, multi-homing policies, and route reflection.",
+      "subject_id": "sub-cs602",
+      "priority": "low",
+      "due_date": "2026-11-10",
+      "is_completed": false,
+      "created_at": "2026-10-27T15:00:00Z"
+    }
+  ],
+  "skills": [
+    {
+      "id": "sk-1",
+      "student_id": "sp-1",
+      "title": "AWS Certified Solutions Architect - Associate",
+      "category": "certification",
+      "organization": "Amazon Web Services",
+      "issue_date": "2026-05-15",
+      "credential_url": "https://aws.amazon.com/verification",
+      "status": "completed"
+    },
+    {
+      "id": "sk-2",
+      "student_id": "sp-1",
+      "title": "Full Stack Distributed Task Queue with Redis",
+      "category": "project",
+      "organization": "Self-Directed / GitHub Open Source",
+      "issue_date": "2026-08-10",
+      "credential_url": "https://github.com/alexmorgan/distributed-queue",
+      "status": "completed"
+    },
+    {
+      "id": "sk-3",
+      "student_id": "sp-1",
+      "title": "Software Engineering Intern",
+      "category": "internship",
+      "organization": "Stripe Payments Infrastructure",
+      "issue_date": "2026-06-01",
+      "status": "completed"
+    },
+    {
+      "id": "sk-4",
+      "student_id": "sp-1",
+      "title": "Deep Learning Specialization (Andrew Ng)",
+      "category": "certification",
+      "organization": "DeepLearning.AI / Coursera",
+      "status": "in_progress"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-1",
+      "user_id": "usr-admin-1",
+      "user_email": "admin@ssms.edu",
+      "action": "SYSTEM_INITIALIZE",
+      "entity_type": "SYSTEM",
+      "entity_id": "system",
+      "details": "Initial system provisioning and academic session activation",
+      "ip_address": "127.0.0.1",
+      "created_at": "2026-10-01T08:00:00Z"
+    },
+    {
+      "id": "aud-2",
+      "user_id": "usr-tch-1",
+      "user_email": "sarah.jenkins@ssms.edu",
+      "action": "ATTENDANCE_RECORDED",
+      "entity_type": "ATTENDANCE",
+      "entity_id": "sess-1",
+      "details": "Marked attendance for CSE-A, Subject: CS601, Period: 1",
+      "ip_address": "10.0.4.12",
+      "created_at": "2026-10-12T09:05:00Z"
+    },
+    {
+      "id": "aud-3",
+      "user_id": "usr-tch-1",
+      "user_email": "sarah.jenkins@ssms.edu",
+      "action": "MARKS_PUBLISHED",
+      "entity_type": "ASSESSMENT",
+      "entity_id": "asm-1",
+      "details": "Published marks for Internal Assessment 1 - DBMS",
+      "ip_address": "10.0.4.12",
+      "created_at": "2026-09-27T14:30:00Z"
+    },
+    {
+      "id": "aud-4",
+      "user_id": "usr-admin-1",
+      "user_email": "admin@ssms.edu",
+      "action": "ANNOUNCEMENT_CREATED",
+      "entity_type": "ANNOUNCEMENT",
+      "entity_id": "ann-1",
+      "details": "Created announcement: End-Semester Examination Schedule Published",
+      "ip_address": "127.0.0.1",
+      "created_at": "2026-10-25T10:00:00Z"
+    }
+  ],
+  "resetTokens": []
+}
