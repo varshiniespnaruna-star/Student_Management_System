@@ -10,6 +10,7 @@ interface AuthContextType {
   loading: boolean;
   isAuthenticated: boolean;
   login: (email: string, password: string) => Promise<User>;
+  register: (payload: any) => Promise<User>;
   logout: () => Promise<void>;
   quickSwitchRole: (role: Role) => Promise<void>;
   refreshUser: () => Promise<void>;
@@ -48,6 +49,14 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
 
   const login = async (email: string, password: string): Promise<User> => {
     const res = await api.post<{ token: string; user: User }>('/auth/login', { email, password });
+    localStorage.setItem('ssms_token', res.token);
+    setToken(res.token);
+    setUser(res.user);
+    return res.user;
+  };
+
+  const register = async (payload: any): Promise<User> => {
+    const res = await api.post<{ token: string; user: User }>('/auth/register', payload);
     localStorage.setItem('ssms_token', res.token);
     setToken(res.token);
     setUser(res.user);
@@ -95,6 +104,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         loading: isLoading,
         isAuthenticated: Boolean(user),
         login,
+        register,
         logout,
         quickSwitchRole,
         refreshUser,

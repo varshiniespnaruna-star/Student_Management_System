@@ -8,7 +8,6 @@ import {
   User as UserIcon,
   CheckCircle,
   ExternalLink,
-  Sparkles,
 } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext.js';
 import { Badge } from '../common/Badge.js';
@@ -21,7 +20,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar, title }) => {
-  const { user, role, logout, quickSwitchRole } = useAuth();
+  const { user, role, logout } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -155,44 +154,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onToggleSidebar, title }) => {
         />
       </form>
 
-      {/* Right: Quick Role Switcher, Notifications, User profile */}
+      {/* Right: Notifications, User profile */}
       <div className="flex items-center gap-2 sm:gap-3">
-        {/* Quick Role Switcher for instant evaluator demo */}
-        <div className="hidden lg:flex items-center bg-slate-100/80 p-0.5 rounded-lg border border-slate-200 text-xs">
-          <span className="px-2 py-0.5 text-slate-400 font-medium text-[11px] flex items-center gap-1">
-            <Sparkles className="w-3 h-3 text-amber-500" /> Demo:
-          </span>
-          <button
-            onClick={() => quickSwitchRole('student')}
-            className={`px-2 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-              role === 'student'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Student
-          </button>
-          <button
-            onClick={() => quickSwitchRole('teacher')}
-            className={`px-2 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-              role === 'teacher'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Teacher
-          </button>
-          <button
-            onClick={() => quickSwitchRole('admin')}
-            className={`px-2 py-1 rounded-md font-medium transition-colors cursor-pointer ${
-              role === 'admin'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            Admin
-          </button>
-        </div>
 
         {/* Notifications Popover */}
         <div className="relative" ref={notifRef}>

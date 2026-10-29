@@ -4994,6 +4994,36 @@
   ],
   "auditLogs": [
     {
+      "user_id": "usr-std-1",
+      "user_email": "alex.morgan@student.ssms.edu",
+      "action": "USER_LOGIN",
+      "entity_type": "AUTH",
+      "details": "User logged in with role student",
+      "ip_address": "127.0.0.1",
+      "id": "aud-1793281794922-khph",
+      "created_at": "2026-10-29T13:49:54.922Z"
+    },
+    {
+      "user_id": "usr-std-1",
+      "user_email": "alex.morgan@student.ssms.edu",
+      "action": "USER_LOGOUT",
+      "entity_type": "AUTH",
+      "details": "User logged out",
+      "ip_address": "127.0.0.1",
+      "id": "aud-1793281659048-y1qk",
+      "created_at": "2026-10-29T13:47:39.048Z"
+    },
+    {
+      "user_id": "usr-std-1",
+      "user_email": "alex.morgan@student.ssms.edu",
+      "action": "USER_LOGIN",
+      "entity_type": "AUTH",
+      "details": "User logged in with role student",
+      "ip_address": "127.0.0.1",
+      "id": "aud-1793281309967-e93a",
+      "created_at": "2026-10-29T13:41:49.967Z"
+    },
+    {
       "id": "aud-1",
       "user_id": "usr-admin-1",
       "user_email": "admin@ssms.edu",

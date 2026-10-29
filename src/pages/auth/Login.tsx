@@ -164,6 +164,15 @@ export const Login: React.FC = () => {
               </button>
             </div>
           </div>
+
+          <div className="mt-5 text-center">
+            <p className="text-xs text-slate-600">
+              Don't have an account?{' '}
+              <Link to="/signup" className="font-semibold text-blue-600 hover:text-blue-700">
+                Sign up here
+              </Link>
+            </p>
+          </div>
         </div>
 
         <p className="mt-4 text-center text-xs text-slate-400">

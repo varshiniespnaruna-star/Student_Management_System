@@ -6,8 +6,9 @@ import { DashboardLayout } from './components/layout/DashboardLayout.js';
 import { LoadingSpinner } from './components/common/LoadingSpinner.js';
 import { Role } from './types/index.js';
 
-// Public Pages (3)
+// Public Pages (4)
 import { Login } from './pages/auth/Login.js';
+import { Register } from './pages/auth/Register.js';
 import { ForgotPassword } from './pages/auth/ForgotPassword.js';
 import { ResetPassword } from './pages/auth/ResetPassword.js';
 
@@ -131,6 +132,22 @@ export default function App() {
               element={
                 <PublicRoute>
                   <Login />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <PublicRoute>
+                  <Register />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/signup"
+              element={
+                <PublicRoute>
+                  <Register />
                 </PublicRoute>
               }
             />
